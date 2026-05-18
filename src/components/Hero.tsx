@@ -23,7 +23,7 @@ export default function Hero() {
           {/* Title */}
           <h1 className="font-Montserrat text-[36px] sm:text-[44px] lg:text-[50px] font-bold leading-[1.2] lg:leading-[60px] tracking-[-0.03em] text-white">
             Blockchain Built for <br />
-            <span className="text-[#4EA5FF]">Real-World Payments</span>
+            <span className="bg-clip-text text-transparent bg-[linear-gradient(90deg,#0D7FF2_0%,#B4E4FF_50%,#1F9DD8_100%)]">Real-World Payments</span>
           </h1>
 
           {/* Subtitle */}

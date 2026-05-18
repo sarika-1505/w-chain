@@ -18,7 +18,7 @@ export default function WCO() {
         <div className="relative z-10 w-full max-w-[1200px] px-6 md:px-10 flex flex-col lg:flex-row items-center justify-between gap-12">
           {/* Left Content */}
           <div className="flex-1 flex flex-col items-start max-w-[600px] w-full">
-            <h1 className="text-[#4EA5FF] text-[34px] sm:text-[44px] md:text-[50px] font-bold leading-tight sm:leading-[55px] md:leading-[60px] md:tracking-[-0.03em] mb-8 max-w-[560px]">
+            <h1 className="font-Montserrat text-transparent bg-clip-text bg-[linear-gradient(90deg,#0D7FF2_0%,#B4E4FF_50%,#1F9DD8_100%)] text-[30px] sm:text-[40px] lg:text-[50px] font-bold leading-[1.2] lg:leading-[60px] tracking-[-0.03em] mb-8 max-w-[560px] w-full">
               Powering Payments &
               <br />
               DeFi with Fast, Secure

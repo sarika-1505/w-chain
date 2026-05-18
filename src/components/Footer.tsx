@@ -76,7 +76,7 @@ export default function Footer() {
           <FooterCol
             title="Resources"
             links={[
-              { label: "Roadmap", href: "#" },
+              // { label: "Roadmap", href: "#" },
               { label: "Blogs", href: "/blogs" },
               { label: "Guides & Tutorials", href: "/guidelines" },
               { label: "Ecosystem & Partners", href: "#" },

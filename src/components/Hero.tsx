@@ -21,9 +21,9 @@ export default function Hero() {
       <div className="relative z-10 w-full max-w-[1440px] mx-auto h-full flex items-center justify-between px-6 md:px-16 lg:px-24">
         <div className="max-w-[650px] w-full z-10">
           {/* Title */}
-          <h1 className="text-[40px] sm:text-[48px] lg:text-[50px] font-bold leading-[1.1] text-white">
+          <h1 className="font-Montserrat text-[36px] sm:text-[44px] lg:text-[50px] font-bold leading-[1.2] lg:leading-[60px] tracking-[-0.03em] text-white">
             Blockchain Built for <br />
-            <span className="text-[#3bb4ff]">Real-World Payments</span>
+            <span className="text-[#2196F3]">Real-World Payments</span>
           </h1>
 
           {/* Subtitle */}

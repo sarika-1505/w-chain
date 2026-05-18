@@ -103,8 +103,8 @@ export default function WCO() {
 
       {/* ================= DECODING THE NUMBERS ================= */}
       <section className="w-full py-24 px-6 md:px-10 flex flex-col items-center bg-[#020B2D]">
-        <h2 className="text-[#4EA5FF] text-[32px] sm:text-[36px] md:text-[48px] font-bold mb-16 text-center leading-tight">
-          Decoding <span className="text-white">the Numbers</span>
+        <h2 className="font-Montserrat text-transparent bg-clip-text bg-[linear-gradient(90deg,#0D7FF2_0%,#B4E4FF_50%,#1F9DD8_100%)] text-[30px] sm:text-[40px] lg:text-[50px] font-bold leading-[1.2] lg:leading-[60px] tracking-[-0.03em] mb-16 text-center lg:w-[584px] lg:h-[60px] w-full h-auto mx-auto">
+          Decoding the Numbers
         </h2>
 
         <div className="flex flex-wrap justify-center gap-6 sm:gap-8 md:gap-12 mb-16 w-full max-w-[1200px]">

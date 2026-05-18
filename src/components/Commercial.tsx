@@ -4,7 +4,7 @@ import { Zap, ShieldCheck, Box } from "lucide-react";
 
 export default function CommerceSection() {
   return (
-    <section className="w-full bg-[#041a33] py-20 px-6">
+    <section className="w-full bg-[#041a33] pt-[120px] md:pt-[130px] pb-20 px-6">
       <div className="max-w-[1100px] mx-auto text-center text-white">
         {/* Heading */}
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">

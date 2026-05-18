@@ -5,7 +5,7 @@ export default function WCO() {
   return (
     <div className="w-full bg-[#020B2D] flex flex-col items-center font-Montserrat">
       {/* ================= HERO SECTION ================= */}
-      <section className="relative w-full min-h-[800px] h-auto lg:h-[800px] py-20 lg:py-0 flex items-center justify-center font-Montserrat bg-[#020B2D] overflow-hidden">
+      <section className="relative w-full h-[800px] overflow-hidden rounded-b-[40px] md:rounded-b-[50px] border-b border-l border-r border-[#4EA5FF]/30 -mb-[40px] md:-mb-[50px] z-10 flex items-center justify-center font-Montserrat bg-[#020B2D]">
         {/* Background Image */}
         <Image
           src="/Group 162729.png"
@@ -102,7 +102,7 @@ export default function WCO() {
       </section>
 
       {/* ================= DECODING THE NUMBERS ================= */}
-      <section className="w-full py-24 px-6 md:px-10 flex flex-col items-center bg-[#020B2D]">
+      <section className="w-full pt-[120px] md:pt-[130px] pb-24 px-6 md:px-10 flex flex-col items-center bg-[#020B2D]">
         <h2 className="font-Montserrat text-transparent bg-clip-text bg-[linear-gradient(90deg,#0D7FF2_0%,#B4E4FF_50%,#1F9DD8_100%)] text-[30px] sm:text-[40px] lg:text-[50px] font-bold leading-[1.2] lg:leading-[60px] tracking-[-0.03em] mb-16 text-center lg:w-[584px] lg:h-[60px] w-full h-auto mx-auto">
           Decoding the Numbers
         </h2>

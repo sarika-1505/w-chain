@@ -180,18 +180,18 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="w-full h-[80px] border-t border-white/10 bg-[#031226] flex items-center justify-center relative px-6 md:px-[70px]">
-          <div className="text-white text-[14px] md:text-[16px] font-medium text-center">
+        <div className="w-full h-[80px] border-t border-white/10 bg-[#031226] flex items-center justify-between md:justify-center relative px-6 md:px-[70px]">
+          <div className="text-white text-[12px] sm:text-[14px] md:text-[16px] font-medium text-left md:text-center">
             © 2026 W Chain. All rights reserved.
           </div>
 
-          <div className="absolute right-6 md:right-[70px] flex items-center">
+          <div className="relative md:absolute md:right-[70px] flex items-center">
             <Image
               src="/bottom-bar-img.png"
               alt="Audited by QuillAudits"
-              width={127}
-              height={52}
-              className="object-contain"
+              width={100}
+              height={40}
+              className="object-contain md:w-[127px] md:h-[52px]"
             />
           </div>
         </div>

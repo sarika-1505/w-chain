@@ -181,7 +181,7 @@ export default function WCO() {
       </section>
 
       {/* ================= ECOSYSTEM / LISTINGS ================= */}
-      <section className="w-full py-24 px-6 md:px-10 flex flex-col lg:flex-row justify-center items-center gap-12 lg:gap-24 bg-[#020B2D]">
+      <section className="w-full lg:h-[616px] h-auto py-20 lg:py-0 px-6 md:px-10 flex flex-col lg:flex-row justify-center items-center gap-12 lg:gap-24 bg-[linear-gradient(180deg,#000D27_0%,#002F8D_100%)] overflow-hidden">
         
         {/* Left Side: Phone Mockup */}
         <div className="flex-1 w-full max-w-[500px] flex justify-center items-center bg-gradient-to-b from-white to-[#E8F1FC] rounded-[24px] p-6 shadow-[0_10px_35px_rgba(0,0,0,0.15)] border border-[#8BC9D4]/30">

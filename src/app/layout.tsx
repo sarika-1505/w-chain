@@ -25,8 +25,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${montserrat.variable} h-full antialiased dark`}>
-      <body className="min-h-full flex flex-col bg-background text-foreground font-sans">
+    <html lang="en" className={`${inter.variable} ${montserrat.variable} h-full antialiased dark overflow-x-hidden`}>
+      <body className="min-h-full flex flex-col bg-background text-foreground font-sans overflow-x-hidden w-full">
         <Header />
         {children}
         <Footer />

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function CTA() {
   return (
-    <section className="relative w-full h-[524px] flex flex-col items-center justify-center bg-[#00040a] -mb-[80px] lg:-mb-[100px] z-10">
+    <section className="relative w-full h-auto pt-16 pb-[120px] md:h-[524px] md:py-0 flex flex-col items-center justify-center bg-[#00040a] -mb-[80px] lg:-mb-[100px] z-10">
       {/* Deep blue background extension to cover the overlapping footer corners */}
       <div className="absolute left-0 right-0 bottom-[-120px] h-[120px] bg-[#021227] -z-10 pointer-events-none" />
       <div 
@@ -14,10 +14,10 @@ export default function CTA() {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#021227]/80" />
 
       <div className="relative z-10 flex flex-col items-center text-center px-6">
-        <h2 className="text-[48px] md:text-[56px] font-bold text-[#3bb4ff] leading-tight">
+        <h2 className="text-[32px] sm:text-[44px] md:text-[56px] font-bold text-[#3bb4ff] leading-tight">
           Start Building on W Chain
         </h2>
-        <p className="mt-4 text-lg text-white/90 font-medium">
+        <p className="mt-4 text-sm sm:text-base md:text-lg text-white/90 font-medium max-w-[600px]">
           Access the docs, testnet, and W Builders program — everything you need to deploy.
         </p>
 

@@ -195,10 +195,10 @@ export default function WCO() {
         </div>
 
         {/* Right Side: Exchange Links */}
-        <div className="w-full lg:w-[705px] lg:h-[380px] h-auto flex flex-col gap-[20px] justify-between">
+        <div className="w-full lg:w-[705px] lg:h-[380px] h-auto flex flex-col justify-between gap-[40px] lg:gap-0">
           
           {/* CoinMarketCap Card */}
-          <div className="lg:h-[180px] w-full bg-gradient-to-b from-[#0A204E]/80 to-[#041029]/80 backdrop-blur-md border border-[#4EA5FF]/20 rounded-[24px] px-6 md:px-10 py-6 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-[0_0_20px_rgba(0,0,0,0.3)]">
+          <div className="lg:h-[170px] w-full bg-[linear-gradient(135deg,rgba(255,255,255,0.08)_0%,rgba(28,96,107,0.2)_100%)] backdrop-blur-md border border-[#8BC9D4]/30 rounded-[20px] px-6 md:px-10 py-6 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-[0_0_20px_rgba(0,0,0,0.2)]">
             <Image 
               src="/image 29.png" 
               alt="CoinMarketCap" 
@@ -218,7 +218,7 @@ export default function WCO() {
           </div>
 
           {/* CoinGecko Card */}
-          <div className="lg:h-[180px] w-full bg-gradient-to-b from-[#0A204E]/80 to-[#041029]/80 backdrop-blur-md border border-[#4EA5FF]/20 rounded-[24px] px-6 md:px-10 py-6 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-[0_0_20px_rgba(0,0,0,0.3)]">
+          <div className="lg:h-[170px] w-full bg-[linear-gradient(135deg,rgba(255,255,255,0.08)_0%,rgba(28,96,107,0.2)_100%)] backdrop-blur-md border border-[#8BC9D4]/30 rounded-[20px] px-6 md:px-10 py-6 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-[0_0_20px_rgba(0,0,0,0.2)]">
             <Image 
               src="/image 30.png" 
               alt="CoinGecko" 

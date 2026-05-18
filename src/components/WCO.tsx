@@ -195,10 +195,10 @@ export default function WCO() {
         </div>
 
         {/* Right Side: Exchange Links */}
-        <div className="w-full max-w-[705px] h-auto flex flex-col gap-6">
+        <div className="w-full lg:w-[705px] lg:h-[380px] h-auto flex flex-col gap-[20px] justify-between">
           
           {/* CoinMarketCap Card */}
-          <div className="flex-1 w-full bg-[linear-gradient(90deg,#0A1E4A_0%,#153373_100%)] border border-[#4EA5FF]/30 rounded-[24px] px-6 md:px-10 py-6 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-[0_0_20px_rgba(0,0,0,0.3)]">
+          <div className="lg:h-[180px] w-full bg-[linear-gradient(90deg,#0A1E4A_0%,#153373_100%)] border border-[#4EA5FF]/30 rounded-[24px] px-6 md:px-10 py-6 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-[0_0_20px_rgba(0,0,0,0.3)]">
             <Image src="/image 29.png" alt="CoinMarketCap" width={220} height={40} className="object-contain h-[40px] w-auto sm:ml-2" />
             
             <Link href="#" className="w-full sm:w-auto flex items-center justify-center gap-3 bg-[linear-gradient(90deg,#0F6CB8_0%,#4EA5FF_100%)] hover:opacity-90 transition-opacity text-white px-6 sm:px-8 py-3.5 rounded-full font-bold text-[15px] sm:text-[16px] shadow-[0_0_15px_rgba(78,165,255,0.4)] sm:mr-2">
@@ -212,7 +212,7 @@ export default function WCO() {
           </div>
 
           {/* CoinGecko Card */}
-          <div className="flex-1 w-full bg-[linear-gradient(90deg,#0A1E4A_0%,#153373_100%)] border border-[#4EA5FF]/30 rounded-[24px] px-6 md:px-10 py-6 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-[0_0_20px_rgba(0,0,0,0.3)]">
+          <div className="lg:h-[180px] w-full bg-[linear-gradient(90deg,#0A1E4A_0%,#153373_100%)] border border-[#4EA5FF]/30 rounded-[24px] px-6 md:px-10 py-6 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-[0_0_20px_rgba(0,0,0,0.3)]">
             <Image src="/image 30.png" alt="CoinGecko" width={200} height={40} className="object-contain h-[40px] w-auto sm:ml-2" />
             
             <Link href="#" className="w-full sm:w-auto flex items-center justify-center gap-3 bg-[linear-gradient(90deg,#0F6CB8_0%,#4EA5FF_100%)] hover:opacity-90 transition-opacity text-white px-6 sm:px-8 py-3.5 rounded-full font-bold text-[15px] sm:text-[16px] shadow-[0_0_15px_rgba(78,165,255,0.4)] sm:mr-2">

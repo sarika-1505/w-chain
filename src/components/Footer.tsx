@@ -46,7 +46,8 @@ export default function Footer() {
               title="Get Started"
               links={[
                 { label: "WCO", href: "/wco" },
-                { label: "WAVE (FARM)", href: "/wave-token" },
+                 { label: "WAVE (FARM)", href: "/wave" },
+                { label: "WAVE Tokenomic", href: "/wave-token" },
                 { label: "W Swap", href: "/wswap" },
                 {
                   label: "Multi Validator Bridge",
@@ -72,6 +73,7 @@ export default function Footer() {
           <FooterCol
             title="Developers"
             links={[
+               { label: "W Chain Tokenomics", href: "/w-chain" },
               { label: "W Chain Hub (Gitbook)", href: "#" },
               { label: "W Chain (Mainnet) Explorer", href: "#" },
               { label: "W Chain (Testnet) Explorer", href: "#" },

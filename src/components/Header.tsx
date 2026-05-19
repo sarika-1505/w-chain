@@ -48,17 +48,42 @@ export default function Header() {
             <NavItem label="Our Partners" />
           </nav>
 
-          <Link
-            href="#"
-            className="
-              px-6 py-2 rounded-full text-sm font-bold text-[#5AB6DE]
-              bg-transparent border-2 border-[#5AB6DE]
-              hover:bg-[#5AB6DE]/10 hover:shadow-[0_0_15px_rgba(90,182,222,0.4)]
-              transition duration-300
-            "
-          >
-            Get WCO
-          </Link>
+<Link
+  href="#"
+  className="
+    w-[140px]
+    h-[50px]
+
+    rounded-full
+
+    flex
+    items-center
+    justify-center
+
+    text-white
+
+    font-Montserrat
+    font-bold
+    text-[18px]
+
+    tracking-[-0.03em]
+
+    bg-[linear-gradient(180deg,#5AB6DE_0%,#02122E_55%,#035DA9_100%)]
+
+    shadow-[0_0_18px_rgba(90,182,222,0.35)]
+
+    border
+    border-[#5AB6DE]/30
+
+    transition-all
+    duration-300
+
+    hover:scale-[1.02]
+    hover:shadow-[0_0_25px_rgba(90,182,222,0.55)]
+  "
+>
+  Get WCO
+</Link>
         </div>
       </div>
     </header>

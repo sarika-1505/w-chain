@@ -102,41 +102,73 @@ export default function WCO() {
       </section>
 
       {/* ================= DECODING THE NUMBERS ================= */}
-      <section className="w-full pt-[120px] md:pt-[130px] pb-24 px-6 md:px-10 flex flex-col items-center bg-[#020B2D]">
-        <h2 className="font-Montserrat text-transparent bg-clip-text bg-[linear-gradient(90deg,#0D7FF2_0%,#B4E4FF_50%,#1F9DD8_100%)] text-[30px] sm:text-[40px] lg:text-[50px] font-bold leading-[1.2] lg:leading-[60px] tracking-[-0.03em] mb-16 text-center lg:w-[584px] lg:h-[60px] w-full h-auto mx-auto">
-          Decoding the Numbers
-        </h2>
+<section className="relative overflow-hidden w-full pt-[120px] md:pt-[130px] pb-24 px-6 md:px-10 flex flex-col items-center bg-[linear-gradient(180deg,#000D27_0%,#002F8D_100%)]">
+  
+  {/* Heading */}
+  <h2 className="font-Montserrat text-transparent bg-clip-text bg-[linear-gradient(90deg,#0D7FF2_0%,#B4E4FF_50%,#1F9DD8_100%)] text-[32px] sm:text-[40px] lg:text-[60px] font-bold leading-[100%] tracking-[-0.03em] mb-20 text-center">
+    Decoding the Numbers
+  </h2>
 
-        <div className="flex flex-wrap justify-center gap-6 sm:gap-8 md:gap-12 mb-16 w-full max-w-[1200px]">
-          {/* Circle 1 */}
-          <div className="w-[145px] h-[145px] sm:w-[180px] sm:h-[180px] md:w-[200px] md:h-[200px] rounded-full border border-white/20 bg-[linear-gradient(180deg,rgba(43,69,115,0.4)_0%,rgba(11,27,61,0.4)_100%)] flex flex-col items-center justify-center backdrop-blur-sm shadow-[0_0_30px_rgba(78,165,255,0.1)]">
-            <h3 className="text-white text-[24px] sm:text-[32px] md:text-[40px] font-bold mb-1.5 sm:mb-2">$284M</h3>
-            <p className="text-white/80 text-[12px] sm:text-[14px]">Market Cap</p>
-          </div>
-          {/* Circle 2 */}
-          <div className="w-[145px] h-[145px] sm:w-[180px] sm:h-[180px] md:w-[200px] md:h-[200px] rounded-full border border-white/20 bg-[linear-gradient(180deg,rgba(43,69,115,0.4)_0%,rgba(11,27,61,0.4)_100%)] flex flex-col items-center justify-center backdrop-blur-sm shadow-[0_0_30px_rgba(78,165,255,0.1)]">
-            <h3 className="text-white text-[24px] sm:text-[32px] md:text-[40px] font-bold mb-1.5 sm:mb-2">1.2B</h3>
-            <p className="text-white/80 text-[12px] sm:text-[14px]">Total Supply</p>
-          </div>
-          {/* Circle 3 */}
-          <div className="w-[145px] h-[145px] sm:w-[180px] sm:h-[180px] md:w-[200px] md:h-[200px] rounded-full border border-white/20 bg-[linear-gradient(180deg,rgba(43,69,115,0.4)_0%,rgba(11,27,61,0.4)_100%)] flex flex-col items-center justify-center backdrop-blur-sm shadow-[0_0_30px_rgba(78,165,255,0.1)]">
-            <h3 className="text-white text-[24px] sm:text-[32px] md:text-[40px] font-bold mb-1.5 sm:mb-2">$48M</h3>
-            <p className="text-white/80 text-[12px] sm:text-[14px]">Volume (24h)</p>
-          </div>
-          {/* Circle 4 */}
-          <div className="w-[145px] h-[145px] sm:w-[180px] sm:h-[180px] md:w-[200px] md:h-[200px] rounded-full border border-white/20 bg-[linear-gradient(180deg,rgba(43,69,115,0.4)_0%,rgba(11,27,61,0.4)_100%)] flex flex-col items-center justify-center backdrop-blur-sm shadow-[0_0_30px_rgba(78,165,255,0.1)]">
-            <h3 className="text-white text-[24px] sm:text-[32px] md:text-[40px] font-bold mb-1.5 sm:mb-2">16.9%</h3>
-            <p className="text-white/80 text-[12px] sm:text-[14px]">Volume/Mkt</p>
-          </div>
-        </div>
+  {/* Circles */}
+  <div className="flex flex-wrap justify-center gap-8 md:gap-10 lg:gap-12 mb-14 w-full max-w-[1300px]">
+    
+    {/* Circle 1 */}
+    <div className="w-[180px] h-[180px] sm:w-[220px] sm:h-[220px] lg:w-[263px] lg:h-[263px] rounded-full border-[10px] border-[#1482F2]/20 flex flex-col items-center justify-center bg-transparent">
+      
+      <h3 className="font-Montserrat font-black text-white text-[38px] sm:text-[48px] lg:text-[60px] leading-[100%] tracking-[-0.03em] text-center">
+        $284M
+      </h3>
 
-        <p className="text-white/90 text-[14px] sm:text-[15px] md:text-[16px] text-center max-w-[800px] font-light">
-          The numbers speak! See W Chain&apos;s rapid growth, security, and efficiency in action.
-        </p>
-      </section>
+      <p className="mt-5 text-white text-[14px] sm:text-[16px] font-normal leading-[100%] tracking-[-0.03em] text-center">
+        Market Cap
+      </p>
+    </div>
+
+    {/* Circle 2 */}
+    <div className="w-[180px] h-[180px] sm:w-[220px] sm:h-[220px] lg:w-[263px] lg:h-[263px] rounded-full border-[10px] border-[#1482F2]/20 flex flex-col items-center justify-center bg-transparent">
+      
+      <h3 className="font-Montserrat font-black text-white text-[38px] sm:text-[48px] lg:text-[60px] leading-[100%] tracking-[-0.03em] text-center">
+        1.2B
+      </h3>
+
+      <p className="mt-5 text-white text-[14px] sm:text-[16px] font-normal leading-[100%] tracking-[-0.03em] text-center">
+        Total Supply
+      </p>
+    </div>
+
+    {/* Circle 3 */}
+    <div className="w-[180px] h-[180px] sm:w-[220px] sm:h-[220px] lg:w-[263px] lg:h-[263px] rounded-full border-[10px] border-[#1482F2]/20 flex flex-col items-center justify-center bg-transparent">
+      
+      <h3 className="font-Montserrat font-black text-white text-[38px] sm:text-[48px] lg:text-[60px] leading-[100%] tracking-[-0.03em] text-center">
+        $48M
+      </h3>
+
+      <p className="mt-5 text-white text-[14px] sm:text-[16px] font-normal leading-[100%] tracking-[-0.03em] text-center">
+        Volume (24h)
+      </p>
+    </div>
+
+    {/* Circle 4 */}
+    <div className="w-[180px] h-[180px] sm:w-[220px] sm:h-[220px] lg:w-[263px] lg:h-[263px] rounded-full border-[10px] border-[#1482F2]/20 flex flex-col items-center justify-center bg-transparent">
+      
+      <h3 className="font-Montserrat font-black text-white text-[38px] sm:text-[48px] lg:text-[60px] leading-[100%] tracking-[-0.03em] text-center">
+        16.9%
+      </h3>
+
+      <p className="mt-5 text-white text-[14px] sm:text-[16px] font-normal leading-[100%] tracking-[-0.03em] text-center">
+        Volume/Mkt
+      </p>
+    </div>
+  </div>
+
+  {/* Bottom Text */}
+  <p className="text-white text-[14px] sm:text-[15px] md:text-[16px] font-Montserrat leading-[100%] tracking-[-0.03em] text-center max-w-[760px]">
+    The numbers speak! See W Chain&apos;s rapid growth, security, and efficiency in action.
+  </p>
+</section>
 
       {/* ================= WCO IN ACTION ================= */}
-      <section className="w-full py-20 px-6 md:px-10 flex flex-col items-center bg-[linear-gradient(180deg,#020B2D_0%,#001C54_100%)] border-t border-[#4EA5FF]/20">
+      <section className="w-full py-20 px-6 md:px-10 flex flex-col items-center bg-[#000D27] border-t border-[#4EA5FF]/20">
         <h2 className="text-[#4EA5FF] text-[32px] sm:text-[36px] md:text-[48px] font-bold mb-16 flex items-center gap-4 text-center leading-tight">
           <svg width="24" height="36" viewBox="0 0 24 36" fill="white" xmlns="http://www.w3.org/2000/svg">
             <path d="M13.5 0L0 21H10.5L9 36L24 13.5H13.5L15 0Z"/>
@@ -179,6 +211,8 @@ export default function WCO() {
           </div>
         </div>
       </section>
+
+      <div className="w-[1205px] h-[1px] bg-white/10 mx-auto" />
 
       {/* ================= ECOSYSTEM / LISTINGS ================= */}
       <section className="w-full lg:h-[616px] h-auto py-20 lg:py-0 px-6 md:px-10 flex flex-col lg:flex-row justify-center items-center gap-12 lg:gap-24 bg-[linear-gradient(180deg,#000D27_0%,#002F8D_100%)] overflow-hidden">
@@ -240,40 +274,195 @@ export default function WCO() {
         </div>
       </section>
 
-      {/* ================= CTA SECTION ================= */}
-      <section className="w-full pt-24 pb-44 px-6 md:px-10 flex flex-col items-center bg-[linear-gradient(180deg,#020B2D_0%,#002B7F_100%)] border-t border-white/5 relative z-10 -mb-[80px] lg:-mb-[100px]">
-        {/* Deep blue background extension to cover the overlapping footer corners */}
-        <div className="absolute left-0 right-0 bottom-[-120px] h-[120px] bg-[#002B7F] -z-10 pointer-events-none" />
+{/* ================= CTA SECTION ================= */}
+{/* ================= CTA SECTION ================= */}
+<section className="relative w-full pt-[90px] pb-[170px] px-6 md:px-10 flex flex-col items-center bg-[linear-gradient(180deg,#000D27_0%,#002F8D_100%)] overflow-hidden -mb-[80px] lg:-mb-[100px]">
 
-        <div className="w-full max-w-[1000px] bg-[linear-gradient(180deg,#0A1B4A_0%,#050F2C_100%)] rounded-[24px] py-16 px-6 md:px-16 border border-[#4EA5FF]/20 shadow-[0_0_30px_rgba(78,165,255,0.1)] flex flex-col items-center text-center">
-          <h2 className="text-[#4EA5FF] text-[30px] sm:text-[36px] md:text-[48px] font-bold mb-4 leading-tight">
-            Own the network you use.
-          </h2>
-          <p className="text-white/90 text-[15px] sm:text-[16px] md:text-[18px] leading-relaxed max-w-[600px] mb-10 font-light">
-            Govern, stake, and earn with WCO. Get started in minutes.
-          </p>
-          
-          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 w-full sm:w-auto">
-            <button className="w-full sm:w-auto flex items-center justify-center gap-3 bg-[linear-gradient(90deg,#0F6CB8_0%,#4EA5FF_100%)] hover:opacity-90 transition-opacity text-white px-8 py-3.5 rounded-full font-bold text-[16px] shadow-[0_0_15px_rgba(78,165,255,0.4)]">
-              Get WCO
-              <span className="w-6 h-6 flex items-center justify-center rounded-full border border-white">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </span>
-            </button>
+  {/* Bottom Background Extension */}
+  <div className="absolute left-0 right-0 bottom-[-120px] h-[120px] bg-[#002F8D] -z-10 pointer-events-none" />
 
-            <button className="w-full sm:w-auto flex items-center justify-center gap-3 bg-transparent border border-white/40 hover:bg-white/10 transition-colors text-white px-8 py-3.5 rounded-full font-bold text-[16px]">
-              Stake Now
-              <span className="w-6 h-6 flex items-center justify-center rounded-full border border-white">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </span>
-            </button>
-          </div>
-        </div>
-      </section>
+  {/* CTA CARD */}
+  <div
+    className="
+      relative
+      w-full
+      max-w-[1126px]
+      min-h-[300px]
+
+      rounded-[22px]
+
+      border-[5px]
+      border-[#1D4F9B]
+
+      bg-[linear-gradient(180deg,#00113A_0%,#012A7B_100%)]
+
+      shadow-[inset_0_0_0_1px_rgba(180,224,255,0.04)]
+
+      hover:border-[#0B2A5A]
+      hover:bg-[linear-gradient(180deg,#000C28_0%,#001E5C_100%)]
+
+      transition-all
+      duration-500
+
+      flex
+      flex-col
+      items-center
+      justify-center
+
+      text-center
+
+      px-6
+      md:px-16
+      py-[70px]
+
+      overflow-hidden
+    "
+  >
+
+    {/* Inner Glow */}
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(78,165,255,0.08),transparent_60%)] pointer-events-none" />
+
+    {/* CONTENT */}
+    <div className="relative z-10 flex flex-col items-center">
+
+      {/* HEADING */}
+      <h2
+        className="
+          font-Montserrat
+          font-bold
+
+          text-[34px]
+          sm:text-[46px]
+          lg:text-[60px]
+
+          leading-[100%]
+          tracking-[-0.03em]
+
+          text-transparent
+          bg-clip-text
+          bg-[linear-gradient(90deg,#0D7FF2_0%,#B4E4FF_50%,#1F9DD8_100%)]
+
+          mb-5
+        "
+      >
+        Own the network you use.
+      </h2>
+
+      {/* SUBTEXT */}
+      <p
+        className="
+          text-white
+
+          text-[14px]
+          sm:text-[16px]
+          md:text-[18px]
+
+          font-normal
+          leading-[100%]
+          tracking-[-0.03em]
+
+          mb-10
+        "
+      >
+        Govern, stake, and earn with WCO. Get started in minutes.
+      </p>
+
+      {/* BUTTONS */}
+      <div className="flex flex-wrap items-center justify-center gap-4">
+
+        {/* GET WCO */}
+        <button
+          className="
+            h-[48px]
+            pl-8
+            pr-[10px]
+
+            rounded-full
+
+            bg-[linear-gradient(90deg,#0F6CB8_0%,#5EBEFF_100%)]
+
+            flex
+            items-center
+            gap-5
+
+            text-white
+            font-semibold
+            text-[16px]
+
+            hover:brightness-110
+
+            transition-all
+            duration-300
+          "
+        >
+          Get WCO
+
+          <span className="w-[28px] h-[28px] rounded-full border border-white flex items-center justify-center">
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </span>
+        </button>
+
+        {/* STAKE NOW */}
+        <button
+          className="
+            h-[48px]
+            pl-8
+            pr-[10px]
+
+            rounded-full
+
+            border
+            border-[#4EA5FF]
+
+            bg-[#00142C]
+
+            hover:bg-[#071A3D]
+            hover:border-[#0B2A5A]
+
+            transition-all
+            duration-300
+
+            flex
+            items-center
+            gap-5
+
+            text-white
+            font-semibold
+            text-[16px]
+          "
+        >
+          Stake Now
+
+          <span className="w-[28px] h-[28px] rounded-full border border-white flex items-center justify-center">
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
 
     </div>
   );

@@ -32,17 +32,17 @@ const newsCards = [
 
 export default function NewsPressSection() {
   return (
-    <section className="w-full bg-[#02142B] py-24 px-6 overflow-hidden">
-      <div className="max-w-[1260px] mx-auto">
+    <section className="w-full bg-[linear-gradient(180deg,#000D27_0%,#002F8D_100%)] py-24 px-6 overflow-hidden">
+      <div className="max-w-[1220px] mx-auto">
         {/* Heading */}
         <div className="text-center">
-          <h2 className="text-[44px] md:text-[64px] font-bold text-[#63BFFF]">
+          <h2 className="font-Montserrat font-bold text-[32px] sm:text-[40px] lg:text-[50px] leading-[40px] sm:leading-[50px] lg:leading-[60px] tracking-[-0.03em] bg-clip-text text-transparent bg-[linear-gradient(90deg,#0D7FF2_0%,#B4E4FF_50%,#1F9DD8_100%)]">
             News & Press
           </h2>
         </div>
 
         {/* Cards Grid */}
-        <div className="mt-20 grid grid-cols-1 xl:grid-cols-2 gap-4 justify-items-center">
+        <div className="mt-20 grid grid-cols-1 xl:grid-cols-2 gap-[8px]">
           {newsCards.map((card, index) => {
             const isContentFirst = index < 2;
 
@@ -51,7 +51,7 @@ export default function NewsPressSection() {
                 key={index}
                 className="
                   w-full
-                  max-w-[602px]
+                  xl:w-[602px]
                   h-auto
                   md:h-[250px]
                   bg-[#10345D]
@@ -59,8 +59,7 @@ export default function NewsPressSection() {
                   flex
                   flex-col
                   md:flex-row
-                  rounded-[16px]
-                  shadow-[0_0_20px_rgba(0,0,0,0.15)]
+                  rounded-none
                 "
               >
                 {/* CONTENT COLUMN */}
@@ -70,12 +69,16 @@ export default function NewsPressSection() {
                     md:w-[301px]
                     h-[250px]
                     relative
-                    p-6
+                    p-7
                     bg-[linear-gradient(180deg,#1B72B7_0%,#58B5E8_100%)]
                     flex
                     flex-col
                     justify-between
-                    ${isContentFirst ? "order-1 md:order-1" : "order-1 md:order-2"}
+                    ${
+                      isContentFirst
+                        ? "order-1 md:order-1"
+                        : "order-1 md:order-2"
+                    }
                   `}
                 >
                   <div>
@@ -85,7 +88,7 @@ export default function NewsPressSection() {
                     </p>
 
                     {/* Title */}
-                    <h3 className="mt-4 text-white text-[15px] leading-[1.35] font-medium">
+                    <h3 className="mt-5 text-white text-[16px] leading-[1.4] font-semibold max-w-[240px]">
                       {card.title}
                     </h3>
                   </div>
@@ -94,8 +97,8 @@ export default function NewsPressSection() {
                   <div className="flex justify-end">
                     <button
                       className="
-                        w-8
-                        h-8
+                        w-10
+                        h-10
                         rounded-full
                         border
                         border-white/50
@@ -104,11 +107,12 @@ export default function NewsPressSection() {
                         justify-center
                         hover:bg-white
                         group
-                        transition
+                        transition-all
+                        duration-300
                       "
                     >
                       <ArrowRight
-                        size={16}
+                        size={18}
                         className="text-white group-hover:text-black transition"
                       />
                     </button>
@@ -123,14 +127,18 @@ export default function NewsPressSection() {
                     h-[250px]
                     relative
                     overflow-hidden
-                    ${isContentFirst ? "order-2 md:order-2" : "order-2 md:order-1"}
+                    ${
+                      isContentFirst
+                        ? "order-2 md:order-2"
+                        : "order-2 md:order-1"
+                    }
                   `}
                 >
                   <Image
                     src={card.image}
                     alt={card.title}
                     fill
-                    className="object-cover pointer-events-none"
+                    className="object-cover"
                   />
                 </div>
               </div>
@@ -145,7 +153,8 @@ export default function NewsPressSection() {
               key={index}
               className={`
                 rounded-full
-                transition
+                transition-all
+                duration-300
                 ${
                   index === 0
                     ? "w-3 h-3 bg-[#8DCBFF]"

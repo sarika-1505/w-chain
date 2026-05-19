@@ -477,10 +477,10 @@ export default function WSwap() {
           Swap in <span className="text-[#4EA5FF]">three steps</span>
         </h2>
 
-        <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-8 w-full max-w-[1000px]">
+        <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-[1000px] gap-12 md:gap-4 relative">
           {/* Step 1 */}
-          <div className="flex flex-col items-center text-center w-full max-w-[280px]">
-            <div className="w-[120px] h-[120px] rounded-full border border-white/20 bg-[linear-gradient(180deg,rgba(43,69,115,0.4)_0%,rgba(11,27,61,0.4)_100%)] flex flex-col items-center justify-center shadow-[0_0_30px_rgba(78,165,255,0.1)] mb-6">
+          <div className="flex flex-col items-center text-center w-full max-w-[240px] z-10">
+            <div className="w-[120px] h-[120px] rounded-full border border-white/20 bg-[linear-gradient(180deg,rgba(43,69,115,0.4)_0%,rgba(11,27,61,0.4)_100%)] flex flex-col items-center justify-center shadow-[0_0_30px_rgba(78,165,255,0.1)] mb-6 hover:scale-105 transition-transform duration-300">
               <svg
                 width="40"
                 height="40"
@@ -504,14 +504,24 @@ export default function WSwap() {
             </p>
           </div>
 
-          {/* Arrow 1 */}
-          <div className="hidden md:block flex-1 border-t border-white/20 relative mx-4">
-            <div className="absolute top-1/2 left-0 -translate-y-1/2 w-3 h-3 border-t border-l border-white/20 rotate-[-45deg]" />
+          {/* Arrow 1 (Left Pointing) */}
+          <div className="hidden md:flex items-center justify-center flex-1 h-[120px] max-w-[150px] relative mx-2">
+            {/* Dashed line background */}
+            <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 h-[1px] border-t border-dashed border-[#4EA5FF]/40" />
+            {/* Arrow Image */}
+            <div className="relative z-10 w-[120px] h-[24px]">
+              <Image
+                src="/arrow-left.png"
+                alt="Arrow Left"
+                fill
+                className="object-contain"
+              />
+            </div>
           </div>
 
           {/* Step 2 */}
-          <div className="flex flex-col items-center text-center w-full max-w-[280px]">
-            <div className="w-[120px] h-[120px] rounded-full border border-white/20 bg-[linear-gradient(180deg,rgba(43,69,115,0.4)_0%,rgba(11,27,61,0.4)_100%)] flex flex-col items-center justify-center shadow-[0_0_30px_rgba(78,165,255,0.1)] mb-6">
+          <div className="flex flex-col items-center text-center w-full max-w-[240px] z-10">
+            <div className="w-[120px] h-[120px] rounded-full border border-white/20 bg-[linear-gradient(180deg,rgba(43,69,115,0.4)_0%,rgba(11,27,61,0.4)_100%)] flex flex-col items-center justify-center shadow-[0_0_30px_rgba(78,165,255,0.1)] mb-6 hover:scale-105 transition-transform duration-300">
               <svg
                 width="40"
                 height="40"
@@ -534,14 +544,24 @@ export default function WSwap() {
             </p>
           </div>
 
-          {/* Arrow 2 */}
-          <div className="hidden md:block flex-1 border-t border-white/20 relative mx-4">
-            <div className="absolute top-1/2 right-0 -translate-y-1/2 w-3 h-3 border-t border-r border-white/20 rotate-[45deg]" />
+          {/* Arrow 2 (Right Pointing) */}
+          <div className="hidden md:flex items-center justify-center flex-1 h-[120px] max-w-[150px] relative mx-2">
+            {/* Dashed line background */}
+            <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 h-[1px] border-t border-dashed border-[#4EA5FF]/40" />
+            {/* Arrow Image */}
+            <div className="relative z-10 w-[120px] h-[24px]">
+              <Image
+                src="/arrow-right.png"
+                alt="Arrow Right"
+                fill
+                className="object-contain"
+              />
+            </div>
           </div>
 
           {/* Step 3 */}
-          <div className="flex flex-col items-center text-center w-full max-w-[280px]">
-            <div className="w-[120px] h-[120px] rounded-full border border-white/20 bg-[linear-gradient(180deg,rgba(43,69,115,0.4)_0%,rgba(11,27,61,0.4)_100%)] flex flex-col items-center justify-center shadow-[0_0_30px_rgba(78,165,255,0.1)] mb-6">
+          <div className="flex flex-col items-center text-center w-full max-w-[240px] z-10">
+            <div className="w-[120px] h-[120px] rounded-full border border-white/20 bg-[linear-gradient(180deg,rgba(43,69,115,0.4)_0%,rgba(11,27,61,0.4)_100%)] flex flex-col items-center justify-center shadow-[0_0_30px_rgba(78,165,255,0.1)] mb-6 hover:scale-105 transition-transform duration-300">
               <svg
                 width="40"
                 height="40"
@@ -552,7 +572,11 @@ export default function WSwap() {
                 strokeLinecap="round"
                 strokeLinejoin="round"
               >
-                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                {/* Clicking hand icon */}
+                <path d="M12 3a1 1 0 011 1v6.5a1.5 1.5 0 003 0v-2a1.5 1.5 0 013 0v2a1.5 1.5 0 013 0v3.5A7.5 7.5 0 0114.5 21h-2A7.5 7.5 0 015 13.5v-1a1.5 1.5 0 013 0v1" />
+                <path d="M8 8.5V4a1.5 1.5 0 013 0v4.5" />
+                <path d="M10 2a1 1 0 011 1" />
+                <path d="M14 2a1 1 0 011 1" />
               </svg>
             </div>
             <h3 className="text-[#4EA5FF] text-[18px] font-bold mb-2">

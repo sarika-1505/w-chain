@@ -84,45 +84,20 @@ export default function EcosystemSection() {
   }, [index]);
 
   return (
-    <section
-      className="w-full py-24 overflow-hidden"
-      style={{
-        background:
-          "linear-gradient(180deg,#02142B 0%, #083a7a 45%, #0B79C8 100%)",
-      }}
-    >
+    <section className="relative w-full py-24 overflow-hidden bg-[linear-gradient(180deg,#000D27_0%,#002F8D_100%)]">
       {/* Heading */}
       <div className="text-center px-6">
-        <h2 className="text-[42px] md:text-[64px] font-bold text-[#5CB8FF]">
+        <h2 className="font-Montserrat font-bold text-[32px] sm:text-[40px] lg:text-[50px] leading-[40px] sm:leading-[50px] lg:leading-[60px] tracking-[-0.03em] bg-clip-text text-transparent bg-[linear-gradient(90deg,#0D7FF2_0%,#B4E4FF_50%,#1F9DD8_100%)] lg:w-[602px] lg:h-[60px] max-w-full mx-auto">
           The W Chain Ecosystem
         </h2>
 
-        <p className="mt-4 text-white/75 text-[18px] max-w-[820px] mx-auto">
-          Built for seamless, high-volume transactions — secure, transparent,
-          and production-ready.
+        <p className="font-Montserrat font-medium text-[16px] leading-[100%] tracking-[-0.03em] text-[#FFFFFF] lg:w-[689px] lg:h-[20px] max-w-full mx-auto mt-4">
+          Built for seamless, high-volume transactions — secure, transparent, and production-ready.
         </p>
       </div>
 
       {/* Cards Slider */}
       <div className="relative mt-20 overflow-hidden">
-        {/* Gradient Fade Left */}
-        <div
-          className="absolute left-0 top-0 z-20 h-full w-32 pointer-events-none"
-          style={{
-            background:
-              "linear-gradient(90deg, rgba(2,20,43,1), rgba(2,20,43,0))",
-          }}
-        />
-
-        {/* Gradient Fade Right */}
-        <div
-          className="absolute right-0 top-0 z-20 h-full w-32 pointer-events-none"
-          style={{
-            background:
-              "linear-gradient(-90deg, rgba(2,20,43,1), rgba(2,20,43,0))",
-          }}
-        />
-
         {/* Slider Viewport */}
         <div className="w-full overflow-hidden px-6 flex flex-col items-center">
           <div className="w-full max-w-[1234px] overflow-hidden">
@@ -168,11 +143,11 @@ export default function EcosystemSection() {
                   </div>
 
                   {/* Card Bottom styled like the Figma screenshot */}
-                  <div className="flex-1 bg-[#4EA5FF] px-6 py-6 flex flex-col justify-center">
-                    <h3 className="text-[#020B2D] text-[20px] font-bold">
+                  <div className="flex-1 bg-[linear-gradient(180deg,#5AB6DE_0%,#035DA9_100%)] px-6 py-6 flex flex-col justify-center">
+                    <h3 className="text-white text-[20px] font-bold">
                       {card.title}
                     </h3>
-                    <p className="mt-2 text-white text-[14px] leading-relaxed">
+                    <p className="mt-2 text-white/90 text-[14px] leading-relaxed">
                       {card.description}
                     </p>
                   </div>
@@ -197,6 +172,9 @@ export default function EcosystemSection() {
           </div>
         </div>
       </div>
+
+      {/* Centered separator line that does not touch the edges */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[calc(100%-48px)] max-w-[1100px] h-[1px] bg-white/[0.08]" />
     </section>
   );
 }

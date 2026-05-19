@@ -23,13 +23,20 @@ export default function Footer() {
         {/* Footer Content */}
         <div
           className="
-            w-full max-w-[1440px] mx-auto
-            px-6 md:px-[70px]
-            pt-10 md:pt-[55px]
+            w-full
+            max-w-[1440px]
+            mx-auto
+            px-6
+            md:px-[70px]
+            pt-10
+            md:pt-[55px]
             pb-6
-            grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5
-            gap-10 md:gap-[70px]
-            text-white
+            grid
+            grid-cols-2
+            md:grid-cols-3
+            lg:grid-cols-5
+            gap-10
+            md:gap-[70px]
             flex-1
           "
         >
@@ -39,7 +46,7 @@ export default function Footer() {
               title="Get Started"
               links={[
                 { label: "WCO", href: "/wco" },
-                { label: "WAVE Tokenomics", href: "/wave-token" },
+                { label: "WAVE (FARM)", href: "/wave-token" },
                 { label: "W Swap", href: "/wswap" },
                 {
                   label: "Multi Validator Bridge",
@@ -65,7 +72,6 @@ export default function Footer() {
           <FooterCol
             title="Developers"
             links={[
-              { label: "W Chain Tokenomics", href: "/w-chain" },
               { label: "W Chain Hub (Gitbook)", href: "#" },
               { label: "W Chain (Mainnet) Explorer", href: "#" },
               { label: "W Chain (Testnet) Explorer", href: "#" },
@@ -76,7 +82,7 @@ export default function Footer() {
           <FooterCol
             title="Resources"
             links={[
-              // { label: "Roadmap", href: "#" },
+              { label: "Roadmap", href: "#" },
               { label: "Blogs", href: "/blogs" },
               { label: "Guides & Tutorials", href: "/guidelines" },
               { label: "Ecosystem & Partners", href: "#" },
@@ -180,18 +186,30 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="w-full h-[80px] border-t border-white/10 bg-[#031226] flex items-center justify-between md:justify-center relative px-6 md:px-[70px]">
-          <div className="text-white text-[12px] sm:text-[14px] md:text-[16px] font-medium text-left md:text-center">
+        <div className="w-full h-[80px] border-t border-white/10 bg-[#031226] relative flex items-center justify-center px-6 md:px-[70px]">
+          {/* Copyright */}
+          <div
+            className="
+              text-white
+              font-Montserrat
+              font-normal
+              text-[16px]
+              leading-[100%]
+              tracking-[-0.03em]
+              text-center
+            "
+          >
             © 2026 W Chain. All rights reserved.
           </div>
 
-          <div className="relative md:absolute md:right-[70px] flex items-center">
+          {/* Audit Badge */}
+          <div className="absolute right-6 md:right-[70px] flex items-center">
             <Image
               src="/bottom-bar-img.png"
               alt="Audited by QuillAudits"
-              width={100}
-              height={40}
-              className="object-contain md:w-[127px] md:h-[52px]"
+              width={127}
+              height={52}
+              className="object-contain"
             />
           </div>
         </div>
@@ -210,17 +228,29 @@ function FooterCol({
 }) {
   return (
     <div>
-      <h4 className="text-white font-semibold mb-5 relative inline-block text-[17px]">
+      {/* Heading */}
+      <h4 className="text-[#B4E4FF] font-semibold mb-5 relative inline-block text-[17px]">
         {title}
-        <span className="block w-full h-[2px] bg-[#3bb4ff] mt-2"></span>
+
+        <span
+          className="
+            block
+            w-[115px]
+            h-[2px]
+            mt-2
+            rounded-r-[20px]
+            bg-[linear-gradient(90deg,#0D7FF2_0%,#B4E4FF_50%,#1F9DD8_100%)]
+          "
+        ></span>
       </h4>
 
-      <ul className="space-y-3 text-white/80 text-[14px] md:text-[15px]">
+      {/* Links */}
+      <ul className="space-y-3 text-[#FFFFFF] text-[14px] md:text-[15px]">
         {links.map((link, i) => (
           <li key={i}>
             <Link
               href={link.href}
-              className="hover:text-white transition-colors duration-200"
+              className="text-[#FFFFFF] hover:text-[#B4E4FF] transition-colors duration-200"
             >
               {link.label}
             </Link>
@@ -232,7 +262,11 @@ function FooterCol({
 }
 
 /* Social Icon */
-function SocialIcon({ children }: { children: React.ReactNode }) {
+function SocialIcon({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <div className="w-[40px] h-[40px] min-w-[40px] rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300 cursor-pointer">
       {children}

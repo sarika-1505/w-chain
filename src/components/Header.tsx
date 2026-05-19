@@ -29,9 +29,11 @@ export default function Header() {
             <Image
               src="/W Chain-Transparent 1.png"
               alt="logo"
-              width={99}
-              height={56}
-              className="object-contain"
+              width={120}
+              height={68}
+              unoptimized
+              priority
+              className="object-contain hover:scale-105 transition-transform duration-300"
             />
           </Link>
 
@@ -49,12 +51,10 @@ export default function Header() {
           <Link
             href="#"
             className="
-              px-6 py-2 rounded-full text-sm font-semibold text-white
-              bg-linear-to-b from-[#2a8bf2] to-[#003882]
-              shadow-[0_0_20px_rgba(42,139,242,0.4)]
-              hover:shadow-[0_0_25px_rgba(42,139,242,0.6)]
-              transition
-              border border-blue-400/30
+              px-6 py-2 rounded-full text-sm font-bold text-[#5AB6DE]
+              bg-transparent border-2 border-[#5AB6DE]
+              hover:bg-[#5AB6DE]/10 hover:shadow-[0_0_15px_rgba(90,182,222,0.4)]
+              transition duration-300
             "
           >
             Get WCO

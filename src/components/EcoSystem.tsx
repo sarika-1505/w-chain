@@ -92,7 +92,7 @@ export default function OurEcoSystem() {
 
       {/* Laptop Image Section */}
       <div className="w-full max-w-[1309px] mx-auto mt-20 px-4">
-        <div className="relative w-full aspect-[1309/676] rounded-xl overflow-hidden shadow-2xl flex items-center justify-center bg-gray-50">
+        <div className="relative w-full aspect-[1309/676] overflow-hidden flex items-center justify-center">
           <Image 
             src="/11.png" 
             alt="Our Ecosystem Partners Laptop" 

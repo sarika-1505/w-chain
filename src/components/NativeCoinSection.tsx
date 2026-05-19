@@ -5,10 +5,10 @@ import { ArrowRight } from "lucide-react";
 
 export default function NativeCoinSection() {
   return (
-    <section className="w-full bg-[#02142B] py-28 px-6 overflow-hidden">
-      <div className="max-w-[1100px] mx-auto text-center">
+    <section className="relative w-full h-auto lg:h-[601px] flex flex-col justify-center bg-[#000D27] py-16 lg:py-0 px-6 overflow-hidden">
+      <div className="max-w-[1100px] w-full mx-auto text-center">
         {/* Heading */}
-        <h2 className="text-[42px] md:text-[64px] leading-tight font-bold text-[#63BFFF]">
+        <h2 className="font-Montserrat font-bold text-[32px] sm:text-[40px] lg:text-[50px] leading-[40px] sm:leading-[50px] lg:leading-[60px] tracking-[-0.03em] bg-clip-text text-transparent bg-[linear-gradient(90deg,#0D7FF2_0%,#B4E4FF_50%,#1F9DD8_100%)] lg:w-[1099px] lg:h-[60px] max-w-full mx-auto">
           The Native Coin for the Eco System
         </h2>
 
@@ -19,12 +19,12 @@ export default function NativeCoinSection() {
         </p>
 
         {/* Responsive Center Illustration from Figma */}
-        <div className="mt-16 w-full max-w-[660px] mx-auto">
+        <div className="mt-16 w-full max-w-[428px] mx-auto">
           <Image
             src="/Group 162692.png"
             alt="Native Coin Supply Flow"
-            width={660}
-            height={180}
+            width={428}
+            height={182}
             className="w-full h-auto object-contain pointer-events-none"
             priority
           />
@@ -115,6 +115,9 @@ export default function NativeCoinSection() {
           </button>
         </div>
       </div>
+
+      {/* Centered separator line that does not touch the edges */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[calc(100%-48px)] max-w-[1100px] h-[1px] bg-white/[0.08]" />
     </section>
   );
 }

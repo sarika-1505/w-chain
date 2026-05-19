@@ -14,31 +14,30 @@ export default function Hero() {
         className="object-cover object-center"
       />
 
+      {/* Exact Figma "Rectangle 15" Overlay Gradient */}
       <div className="absolute inset-0 bg-[linear-gradient(180deg,#010101_0%,rgba(0,0,0,0.85)_60%,rgba(0,64,136,0.50)_100%)]" />
-      <div className="absolute inset-0 bg-gradient-to-r from-[#000]/80 via-[#000]/30 to-transparent" />
-      <div className="absolute bottom-0 left-0 w-full h-[35%] bg-[radial-gradient(ellipse_at_bottom,rgba(0,136,255,0.4),transparent_70%)]" />
 
-      <div className="relative z-10 w-full max-w-[1440px] mx-auto h-full flex items-center justify-between px-6 md:px-16 lg:px-24">
+      <div className="relative z-10 w-full max-w-[1440px] mx-auto h-full flex items-center justify-between px-6 md:px-16 lg:px-30">
         <div className="max-w-[650px] w-full z-10">
           {/* Title */}
-          <h1 className="font-Montserrat text-[36px] sm:text-[44px] lg:text-[50px] font-bold leading-[1.2] lg:leading-[60px] tracking-[-0.03em] text-white">
+          <h1 className="font-Montserrat text-[36px] sm:text-[44px] lg:text-[50px] font-bold leading-[1.2] lg:leading-[60px] tracking-[-0.03em] text-white lg:w-[546px] max-w-full">
             Blockchain Built for <br />
             <span className="bg-clip-text text-transparent bg-[linear-gradient(90deg,#0D7FF2_0%,#B4E4FF_50%,#1F9DD8_100%)]">Real-World Payments</span>
           </h1>
 
           {/* Subtitle */}
-          <p className="mt-5 text-white/85 text-base sm:text-lg lg:text-[20px] max-w-[546px] leading-relaxed">
-            A payments-native Layer 1 blockchain -<br className="hidden md:block" /> fast, compliant, and built for global adoption.
+          <p className="mt-5 font-Montserrat font-bold text-white text-[18px] sm:text-[22px] lg:text-[25px] lg:w-[564px] max-w-full leading-[1.2] lg:leading-[25px] tracking-[-0.03em]">
+            A payments-native Layer 1 blockchain - fast, compliant, and built for global adoption.
           </p>
 
           {/* Buttons */}
-          <div className="mt-8 flex flex-wrap gap-4">
+          <div className="mt-8 flex flex-wrap gap-4 font-Montserrat">
             {/* Button 1 */}
-            <button className="group flex items-center gap-3 px-6 py-3 rounded-full border border-white/40 bg-black/40 backdrop-blur-md hover:bg-white/10 transition text-white cursor-pointer">
-              <span className="text-[14px] font-semibold">Start Building</span>
-              <span className="w-7 h-7 flex items-center justify-center rounded-full border border-white group-hover:bg-white transition-colors duration-300">
+            <button className="group flex items-center justify-center gap-2 w-[180px] h-[50px] rounded-full border border-[#5AB6DE] bg-[#00142C] hover:bg-[#5AB6DE]/10 hover:shadow-[0_0_15px_rgba(90,182,222,0.3)] transition-all duration-300 text-white cursor-pointer">
+              <span className="text-[14px] font-bold">Start Building</span>
+              <span className="w-7 h-7 flex items-center justify-center rounded-full border border-white group-hover:bg-white transition-colors duration-300 shrink-0">
                 <svg
-                  className="w-4 h-4 text-white group-hover:text-black transition-colors duration-300"
+                  className="w-4 h-4 text-white group-hover:text-[#00142C] transition-colors duration-300"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -52,13 +51,13 @@ export default function Hero() {
             </button>
 
             {/* Button 2 */}
-            <button className="group flex items-center gap-3 px-6 py-3 rounded-full bg-[linear-gradient(90deg,#0F6CB8_0%,#4EA5FF_100%)] hover:opacity-90 transition-opacity text-white cursor-pointer shadow-[0_0_15px_rgba(78,165,255,0.35)]">
-              <span className="text-[14px] font-semibold">
+            <button className="group flex items-center justify-center gap-2 w-[210px] h-[50px] rounded-full bg-[linear-gradient(90deg,#0F6CB8_0%,#4EA5FF_100%)] hover:opacity-95 transition-opacity text-white cursor-pointer shadow-[0_0_15px_rgba(78,165,255,0.35)]">
+              <span className="text-[14px] font-bold">
                 Explore Ecosystem
               </span>
-              <span className="w-7 h-7 flex items-center justify-center rounded-full border border-white/70 group-hover:border-white transition-colors duration-300">
+              <span className="w-7 h-7 flex items-center justify-center rounded-full border border-white group-hover:bg-white transition-colors duration-300 shrink-0">
                 <svg
-                  className="w-4 h-4 text-white"
+                  className="w-4 h-4 text-white group-hover:text-[#0F6CB8] transition-colors duration-300"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { CSSProperties } from "react";
 
 const POOLS_DATA = [
   { name: "WCO (Single Pool)", icons: ["W"], multiplier: "1.0x", apr: "0.37%", tvl: "$78,656.93", vol: "$1,890.11" },
@@ -16,7 +17,7 @@ export default function Wave() {
   return (
     <div className="w-full bg-[#020B2D] flex flex-col items-center font-Montserrat pb-24">
       {/* ================= HERO SECTION ================= */}
-      <section className="relative w-full h-[800px] flex items-center justify-center overflow-hidden bg-[#020B2D]">
+      <section className="relative w-full h-[800px] overflow-hidden rounded-b-[40px] md:rounded-b-[50px] border-b border-l border-r border-[#4EA5FF]/30 -mb-[40px] md:-mb-[50px] z-10 flex items-center justify-center bg-[#020B2D]">
         {/* Background Image */}
         <Image
           src="/Group 163079.png"
@@ -33,12 +34,12 @@ export default function Wave() {
           
           {/* Left Content */}
           <div className="flex-1 flex flex-col items-start max-w-[650px]">
-            <h1 className="text-[#4EA5FF] text-[40px] md:text-[56px] font-bold leading-[1.1] md:tracking-[-0.02em] mb-10">
-              WAVE <span className="inline-block relative top-[4px] ml-2">🌊</span>
+            <h1 className="font-Montserrat text-transparent bg-clip-text bg-[linear-gradient(90deg,#0D7FF2_0%,#B4E4FF_50%,#1F9DD8_100%)] text-[30px] sm:text-[40px] lg:text-[50px] font-bold leading-[1.2] lg:leading-[60px] tracking-[-0.03em] mb-10 lg:w-[560px] lg:h-[169px] w-full h-auto">
+              WAVE <span className="inline-block relative top-[4px] ml-2" style={{ WebkitTextFillColor: "initial" } as CSSProperties}>🌊</span>
               <br />
               The DeFi Engine
               <br />
-              Powering W Chain
+              Powering W Chain  
             </h1>
 
             <div className="flex flex-wrap items-center gap-4">
@@ -96,7 +97,7 @@ export default function Wave() {
       </section>
 
       {/* ================= LIVE ECOSYSTEM PULSE ================= */}
-      <section className="w-full py-24 px-4 md:px-10 flex flex-col items-center relative z-10">
+      <section className="w-full pt-[120px] md:pt-[130px] pb-24 px-4 md:px-10 flex flex-col items-center relative z-10">
         <h2 className="text-[#4EA5FF] text-[36px] md:text-[48px] font-bold mb-16 text-center">
           Live Ecosystem Pulse
         </h2>

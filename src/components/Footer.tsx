@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="w-full flex flex-col items-center bg-transparent relative z-20 overflow-hidden">
+    <footer className="w-full flex flex-col items-center bg-[#002F8D] relative z-40 overflow-hidden">
       <div
         className="
           w-full
@@ -46,7 +46,7 @@ export default function Footer() {
               title="Get Started"
               links={[
                 { label: "WCO", href: "/wco" },
-                 { label: "WAVE (FARM)", href: "/wave" },
+                { label: "WAVE (FARM)", href: "/wave" },
                 { label: "WAVE Tokenomic", href: "/wave-token" },
                 { label: "W Swap", href: "/wswap" },
                 {
@@ -73,7 +73,8 @@ export default function Footer() {
           <FooterCol
             title="Developers"
             links={[
-               { label: "W Chain Tokenomics", href: "/w-chain" },
+              { label: "W Chain Tokenomics", href: "/w-chain" },
+              { label: "W Chain Evolution", href: "/w-chain-evolution" },
               { label: "W Chain Hub (Gitbook)", href: "#" },
               { label: "W Chain (Mainnet) Explorer", href: "#" },
               { label: "W Chain (Testnet) Explorer", href: "#" },
@@ -264,13 +265,9 @@ function FooterCol({
 }
 
 /* Social Icon */
-function SocialIcon({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+function SocialIcon({ children }: { children: React.ReactNode }) {
   return (
-    <div className="w-[40px] h-[40px] min-w-[40px] rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300 cursor-pointer">
+    <div className="w-[40px] h-[40px] min-w-[40px] rounded-full  flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300 cursor-pointer">
       {children}
     </div>
   );

@@ -5,8 +5,8 @@ export default function WSwap() {
   return (
     <div className="w-full bg-[#020B2D] flex flex-col items-center font-Montserrat pb-24">
       {/* ================= HERO SECTION ================= */}
-      <section className="relative w-full min-h-[800px] py-20 flex items-center justify-center overflow-hidden bg-[#020B2D]">
-        {/* Background Image */}
+      <section className="relative w-full min-h-[800px] overflow-hidden rounded-b-[40px] md:rounded-b-[50px] bg-[#020B2D] flex items-center justify-center">
+        {/* ================= BG IMAGE ================= */}
         <Image
           src="/Group 162958.png"
           alt="WSwap Background"
@@ -15,31 +15,136 @@ export default function WSwap() {
           className="object-cover opacity-80"
         />
 
-        {/* Gradient Overlay for blending */}
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(2,11,45,0.9)_0%,rgba(2,11,45,0.6)_50%,rgba(2,11,45,0.2)_100%)] pointer-events-none" />
+        {/* ================= CONTENT ================= */}
+        <div
+          className="
+      relative
+      z-10
 
-        <div className="relative z-10 w-full max-w-[1200px] px-4 md:px-10 flex flex-col md:flex-row items-center justify-between gap-16">
-          {/* Left Content */}
-          <div className="flex-1 flex flex-col items-start max-w-[600px]">
-            <h1 className="text-white text-[44px] md:text-[56px] font-bold leading-[1.15] md:tracking-[-0.02em] mb-10">
+      w-full
+      max-w-[1280px]
+
+      px-6
+      md:px-8
+      lg:px-8
+
+      py-20
+
+      flex
+      flex-col
+      lg:flex-row
+
+      items-center
+      justify-between
+
+      gap-12
+    "
+        >
+          {/* ================= LEFT SIDE ================= */}
+          <div
+            className="
+        w-full
+        max-w-[643px]
+      "
+          >
+            {/* ================= HEADING ================= */}
+            <h1
+              className="
+          font-Montserrat
+          font-bold
+
+          text-white
+
+          text-[36px]
+          sm:text-[42px]
+          lg:text-[50px]
+
+          leading-[105%]
+          tracking-[-0.03em]
+
+          w-full
+          max-w-[643px]
+
+          mb-12
+        "
+            >
               W Swap Seamless Swaps,
               <br />
-              <span className="text-[#4EA5FF]">Unified</span> Liquidity.
+              <span
+                className="
+            text-transparent
+            bg-clip-text
+            bg-[linear-gradient(90deg,#0D7FF2_0%,#B4E4FF_50%,#1F9DD8_100%)]
+          "
+              >
+                Unified
+              </span>{" "}
+              Liquidity.
             </h1>
 
-            <div className="flex flex-wrap items-center gap-4 mb-16">
+            {/* ================= BUTTONS ================= */}
+            <div className="flex flex-wrap items-center gap-4 mb-24">
+              {/* Launch App */}
               <Link
                 href="#"
-                className="flex items-center justify-center gap-3 bg-[linear-gradient(90deg,#0F6CB8_0%,#4EA5FF_100%)] hover:opacity-90 transition-opacity text-white px-8 py-3.5 rounded-full font-bold text-[15px] shadow-[0_0_15px_rgba(78,165,255,0.4)]"
+                className="
+            group
+
+            h-[51px]
+            min-w-[200px]
+
+            rounded-full
+
+            pl-[20px]
+            pr-[8px]
+
+            bg-[linear-gradient(90deg,#0F6CB8_0%,#4EA5FF_100%)]
+
+            flex
+            items-center
+            justify-between
+
+            text-white
+
+            font-Montserrat
+            font-bold
+            text-[16px]
+            leading-[100%]
+
+            shadow-[0_0_20px_rgba(78,165,255,0.35)]
+
+            hover:opacity-90
+
+            transition-all
+            duration-300
+          "
               >
-                Launch App
-                <span className="w-6 h-6 flex items-center justify-center rounded-full border border-white">
+                <span className="font-Montserrat font-bold text-[16px]">
+                  Launch App
+                </span>
+
+                <span
+                  className="
+              w-8
+              h-8
+
+              rounded-full
+              border
+              border-white
+
+              flex
+              items-center
+              justify-center
+
+              bg-white/10
+            "
+                >
                   <svg
                     width="14"
                     height="14"
                     viewBox="0 0 24 24"
                     fill="none"
-                    stroke="currentColor"
+                    stroke="white"
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -49,18 +154,71 @@ export default function WSwap() {
                 </span>
               </Link>
 
+              {/* View Documentation */}
               <Link
                 href="#"
-                className="flex items-center justify-center gap-3 bg-transparent border border-white/40 hover:bg-white/10 transition-colors text-white px-8 py-3.5 rounded-full font-bold text-[15px]"
+                className="
+            group
+
+            h-12.75
+            min-w-63.75
+
+            rounded-full
+
+            border
+            border-[#5AB6DE]
+
+            bg-[#00142C]
+
+            pl-5.5
+            pr-2
+
+            flex
+            items-center
+            justify-between
+
+            text-white
+
+            hover:bg-[#071A3D]
+            hover:border-[#7DD3FC]
+
+            transition-all
+            duration-300
+          "
               >
-                View Documentation
-                <span className="w-6 h-6 flex items-center justify-center rounded-full border border-white">
+                <span
+                  className="
+              font-Montserrat
+              font-bold
+              text-[16px]
+              leading-[100%]
+            "
+                >
+                  View Documentation
+                </span>
+
+                <span
+                  className="
+              w-[32px]
+              h-[32px]
+
+              rounded-full
+              border
+              border-white
+
+              flex
+              items-center
+              justify-center
+
+              bg-white/5
+            "
+                >
                   <svg
                     width="14"
                     height="14"
                     viewBox="0 0 24 24"
                     fill="none"
-                    stroke="currentColor"
+                    stroke="white"
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -71,336 +229,381 @@ export default function WSwap() {
               </Link>
             </div>
 
-            {/* Stats */}
-            <div className="flex flex-wrap items-start gap-12 md:gap-16">
+            {/* ================= STATS ================= */}
+            <div className="flex flex-wrap items-start gap-10 md:gap-14">
+              {/* Stat 1 */}
               <div>
-                <h3 className="text-[#4EA5FF] text-[28px] md:text-[32px] font-bold mb-1">
+                <h3
+                  className="
+              font-Montserrat
+              font-black
+
+              text-[34px]
+              leading-[100%]
+
+              tracking-[-0.03em]
+
+              text-transparent
+              bg-clip-text
+              bg-[linear-gradient(90deg,#0D7FF2_0%,#B4E4FF_50%,#1F9DD8_100%)]
+
+              mb-2
+            "
+                >
                   $148M+
                 </h3>
-                <p className="text-white/90 text-[15px] font-medium">
+
+                <p
+                  className="
+              text-white
+
+              font-Montserrat
+              font-medium
+
+              text-[15px]
+              leading-[100%]
+            "
+                >
                   Total Volume
                 </p>
               </div>
+
+              {/* Stat 2 */}
               <div>
-                <h3 className="text-[#4EA5FF] text-[28px] md:text-[32px] font-bold mb-1">
+                <h3
+                  className="
+              font-Montserrat
+              font-black
+
+              text-[34px]
+              leading-[100%]
+
+              tracking-[-0.03em]
+
+              text-transparent
+              bg-clip-text
+              bg-[linear-gradient(90deg,#0D7FF2_0%,#B4E4FF_50%,#1F9DD8_100%)]
+
+              mb-2
+            "
+                >
                   32K+
                 </h3>
-                <p className="text-white/90 text-[15px] font-medium">
+
+                <p
+                  className="
+              text-white
+
+              font-Montserrat
+              font-medium
+
+              text-[15px]
+              leading-[100%]
+            "
+                >
                   Active Wallets
                 </p>
               </div>
+
+              {/* Stat 3 */}
               <div>
-                <h3 className="text-[#4EA5FF] text-[28px] md:text-[32px] font-bold mb-1">
-                  75<span className="text-white">s</span>
+                <h3
+                  className="
+              font-Montserrat
+              font-black
+
+              text-[34px]
+              leading-[100%]
+
+              tracking-[-0.03em]
+
+              text-transparent
+              bg-clip-text
+              bg-[linear-gradient(90deg,#0D7FF2_0%,#B4E4FF_50%,#1F9DD8_100%)]
+
+              mb-2
+            "
+                >
+                  75s
                 </h3>
-                <p className="text-white/90 text-[15px] font-medium">
+
+                <p
+                  className="
+              text-white
+
+              font-Montserrat
+              font-medium
+
+              text-[15px]
+              leading-[100%]
+            "
+                >
                   Finality
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Right Content (Swap Widget) */}
-          <div className="flex-1 w-full max-w-[480px]">
-            {/* Widget Container */}
-            <div className="w-full bg-[#0A1B4A]/40 backdrop-blur-md border border-[#4EA5FF]/30 rounded-[24px] p-6 shadow-[0_0_30px_rgba(0,0,0,0.5)]">
-              {/* Tabs */}
-              <div className="flex items-center justify-between bg-[#040D29] rounded-[20px] p-1 mb-6 border border-white/5">
-                <button className="flex-1 bg-[linear-gradient(90deg,#1978C8_0%,#4EA5FF_100%)] text-white font-semibold py-2.5 rounded-[16px] text-center text-[15px] shadow-[0_0_10px_rgba(78,165,255,0.3)]">
-                  Swap
-                </button>
-                <button className="flex-1 text-white/80 hover:text-white font-medium py-2.5 rounded-[16px] text-center text-[15px] transition-colors">
-                  Pool
-                </button>
-                <button className="flex-1 text-white/80 hover:text-white font-medium py-2.5 rounded-[16px] text-center text-[15px] transition-colors">
-                  Bridge
-                </button>
-              </div>
+          {/* ================= RIGHT SIDE IMAGE ================= */}
+          <div
+            className="
+        relative
 
-              {/* Swap Form */}
-              <div className="flex flex-col relative">
-                {/* From Box */}
-                <div className="bg-[#020B2D] border border-white/10 rounded-[16px] p-4 flex flex-col gap-2">
-                  <span className="text-white/70 text-[13px] font-medium">
-                    From
-                  </span>
-                  <div className="flex items-center justify-between">
-                    <input
-                      type="text"
-                      value="100"
-                      readOnly
-                      className="bg-transparent text-white text-[24px] font-bold outline-none w-1/2"
-                    />
-                    <button className="flex items-center gap-2 bg-[#1A2C5B] hover:bg-[#1A2C5B]/80 transition-colors px-3 py-1.5 rounded-full border border-white/5">
-                      <Image
-                        src="/Group 162819.png"
-                        alt="Doge"
-                        width={24}
-                        height={24}
-                        className="rounded-full object-cover"
-                      />
-                      <span className="text-white font-medium">Doge</span>
-                      <svg
-                        width="16"
-                        height="16"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="white"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <path d="M6 9l6 6 6-6" />
-                      </svg>
-                    </button>
-                  </div>
-                </div>
+        w-full
+        max-w-[520px]
 
-                {/* Swap Icon Button */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
-                  <button className="w-[36px] h-[36px] bg-[#020B2D] border border-white/20 rounded-[10px] flex items-center justify-center hover:bg-[#0A1B4A] transition-colors group">
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="white"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="group-hover:rotate-180 transition-transform duration-300"
-                    >
-                      <path d="M7 16V4M7 4L3 8M7 4L11 8M17 8V20M17 20L21 16M17 20L13 16" />
-                    </svg>
-                  </button>
-                </div>
-
-                {/* To Box */}
-                <div className="bg-[#020B2D] border border-white/10 rounded-[16px] p-4 flex flex-col gap-2 mt-2">
-                  <span className="text-white/70 text-[13px] font-medium">
-                    To (estimated)
-                  </span>
-                  <div className="flex items-center justify-between">
-                    <input
-                      type="text"
-                      value="0.000"
-                      readOnly
-                      className="bg-transparent text-white text-[24px] font-bold outline-none w-1/2"
-                    />
-                    <button className="flex items-center gap-2 bg-[#1A2C5B] hover:bg-[#1A2C5B]/80 transition-colors px-3 py-1.5 rounded-full border border-white/5">
-                      <div className="w-6 h-6 rounded-full bg-[#1C51C1] flex items-center justify-center text-white text-[10px] font-bold">
-                        $
-                      </div>
-                      <span className="text-white font-medium">Busdc</span>
-                      <svg
-                        width="16"
-                        height="16"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="white"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <path d="M6 9l6 6 6-6" />
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              {/* Price Info */}
-              <div className="flex items-center justify-between mt-4 mb-6 px-2">
-                <span className="text-white/70 text-[13px]">Price</span>
-                <div className="flex items-center gap-3">
-                  <span className="text-white text-[13px] font-medium">
-                    625000000{" "}
-                    <span className="text-white/70 ml-1">DOGE per bUSDC</span>
-                  </span>
-                  <button className="text-white/50 hover:text-white transition-colors border border-white/20 rounded-[4px] p-0.5">
-                    <svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                    </svg>
-                  </button>
-                </div>
-              </div>
-
-              {/* Action Button */}
-              <button className="w-full flex items-center justify-center gap-3 bg-[linear-gradient(90deg,#0F6CB8_0%,#4EA5FF_100%)] hover:opacity-90 transition-opacity text-white py-4 rounded-[16px] font-bold text-[16px] shadow-[0_0_15px_rgba(78,165,255,0.4)]">
-                Get Started
-                <span className="w-6 h-6 flex items-center justify-center rounded-full border border-white">
-                  <svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
-                </span>
-              </button>
-            </div>
+        flex
+        items-center
+        justify-center
+      "
+          >
+            <Image
+              src="/wswap-right.png"
+              alt="WSwap Widget"
+              width={520}
+              height={560}
+              priority
+              className="
+          w-full
+          h-auto
+          object-contain
+        "
+            />
           </div>
         </div>
       </section>
 
-      {/* ================= NETWORK COMPARISON (Image 1) ================= */}
-      <section className="w-full py-24 px-4 md:px-10 flex flex-col items-center relative z-10">
-        <h2 className="text-white text-[32px] md:text-[44px] font-bold mb-2 text-center">
-          Built for <span className="text-[#4EA5FF]">utility</span>, priced for
-          everyone
+      <section
+        className="
+    w-full
+    pt-[110px]
+    pb-[120px]
+    px-4
+    md:px-10
+
+    flex
+    flex-col
+    items-center
+
+    relative
+    z-10
+
+    bg-[linear-gradient(180deg,#000D27_0%,#002F8D_100%)]
+
+    overflow-hidden
+  "
+      >
+        {/* ================= HEADING ================= */}
+        <h2
+          className="
+      font-Montserrat
+      font-bold
+
+      text-center
+
+      text-[34px]
+      md:text-[50px]
+
+      leading-[1.08]
+      tracking-[-0.03em]
+
+      text-white
+
+      mb-5
+    "
+        >
+          Built for{" "}
+          <span
+            className="
+        text-transparent
+        bg-clip-text
+        bg-[linear-gradient(90deg,#0D7FF2_0%,#B4E4FF_50%,#1F9DD8_100%)]
+      "
+          >
+            utility,
+          </span>{" "}
+          priced for everyone
         </h2>
-        <p className="text-white/80 text-[16px] md:text-[18px] mb-16 text-center max-w-[800px]">
-          W Swap rides on W Chain's high-throughput L1 — outperforming
-          <br className="hidden md:block" />
+
+        {/* ================= DESCRIPTION ================= */}
+        <p
+          className="
+      w-full
+      max-w-[786px]
+      text-center
+      text-white
+      font-Montserrat
+      font-medium
+      text-[25px]
+      leading-[100%]
+      tracking-[-0.03em]
+      mb-20
+    "
+        >
+          W Swap rides on W Chain&apos;s high-throughput L1 — outperforming
           legacy networks on every metric that matters.
         </p>
 
-        <div className="flex flex-wrap justify-center gap-6 w-full max-w-[1200px]">
-          {/* Card 1: W Chain */}
-          <div className="flex-1 min-w-[250px] bg-[#0A183D] border border-[#4EA5FF]/30 rounded-[16px] p-8 shadow-[0_0_20px_rgba(78,165,255,0.1)] hover:border-[#4EA5FF]/60 transition-colors">
-            <div className="flex items-center gap-3 mb-10">
-              <div className="w-10 h-10 bg-white rounded-[8px] flex items-center justify-center text-[#020B2D] font-bold text-[14px]">
-                W
-              </div>
-              <span className="text-white font-bold text-[18px]">W Chain</span>
-            </div>
-            <div className="flex flex-col gap-8">
-              <div>
-                <p className="text-white/60 text-[13px] font-medium tracking-wider mb-1">
-                  THROUGHPUT
-                </p>
-                <p className="text-[#4EA5FF] text-[16px] font-bold">
-                  Up to 7,000 TPS
-                </p>
-              </div>
-              <div>
-                <p className="text-white/60 text-[13px] font-medium tracking-wider mb-1">
-                  AVG FEE
-                </p>
-                <p className="text-[#4EA5FF] text-[16px] font-bold">
-                  ~$0.000169
-                </p>
-              </div>
-              <div>
-                <p className="text-white/60 text-[13px] font-medium tracking-wider mb-1">
-                  FINALITY
-                </p>
-                <p className="text-[#4EA5FF] text-[16px] font-bold">75 sec</p>
-              </div>
-            </div>
-          </div>
+        {/* ================= CARDS ================= */}
+        <div
+          className="
+      w-full
+      max-w-[1280px]
 
-          {/* Card 2: Ethereum */}
-          <div className="flex-1 min-w-[250px] bg-[#141C33] border border-white/10 rounded-[16px] p-8 shadow-[0_0_20px_rgba(0,0,0,0.3)]">
-            <div className="flex items-center gap-3 mb-10">
-              <div className="w-10 h-10 bg-white rounded-[8px] flex items-center justify-center text-[#020B2D] font-bold text-[14px]">
-                ETH
-              </div>
-              <span className="text-white font-bold text-[18px]">Ethereum</span>
-            </div>
-            <div className="flex flex-col gap-8">
-              <div>
-                <p className="text-white/60 text-[13px] font-medium tracking-wider mb-1">
-                  THROUGHPUT
-                </p>
-                <p className="text-[#4EA5FF] text-[16px] font-bold">
-                  ~15-30 TPS
-                </p>
-              </div>
-              <div>
-                <p className="text-white/60 text-[13px] font-medium tracking-wider mb-1">
-                  AVG FEE
-                </p>
-                <p className="text-[#4EA5FF] text-[16px] font-bold">~$6.00</p>
-              </div>
-              <div>
-                <p className="text-white/60 text-[13px] font-medium tracking-wider mb-1">
-                  FINALITY
-                </p>
-                <p className="text-[#4EA5FF] text-[16px] font-bold">
-                  6 mins (32 blocks)
-                </p>
-              </div>
-            </div>
-          </div>
+      flex
+      flex-wrap
+      justify-center
 
-          {/* Card 3: Solana */}
-          <div className="flex-1 min-w-[250px] bg-[#141C33] border border-white/10 rounded-[16px] p-8 shadow-[0_0_20px_rgba(0,0,0,0.3)]">
-            <div className="flex items-center gap-3 mb-10">
-              <div className="w-10 h-10 bg-white rounded-[8px] flex items-center justify-center text-[#020B2D] font-bold text-[14px]">
-                SOL
-              </div>
-              <span className="text-white font-bold text-[18px]">Solana</span>
-            </div>
-            <div className="flex flex-col gap-8">
-              <div>
-                <p className="text-white/60 text-[13px] font-medium tracking-wider mb-1">
-                  THROUGHPUT
-                </p>
-                <p className="text-[#4EA5FF] text-[16px] font-bold">
-                  Up to 4,000 TPS
-                </p>
-              </div>
-              <div>
-                <p className="text-white/60 text-[13px] font-medium tracking-wider mb-1">
-                  AVG FEE
-                </p>
-                <p className="text-[#4EA5FF] text-[16px] font-bold">
-                  ~$0.00025
-                </p>
-              </div>
-              <div>
-                <p className="text-white/60 text-[13px] font-medium tracking-wider mb-1">
-                  FINALITY
-                </p>
-                <p className="text-[#4EA5FF] text-[16px] font-bold">30 mins+</p>
-              </div>
-            </div>
-          </div>
+      gap-8
+    "
+        >
+          {[
+            {
+              title: "W Chain",
+              icon: "/Group 162830.png",
+              throughput: "Up to 7,000 TPS",
+              fee: "~$0.000169",
+              finality: "75 sec",
+              active: true,
+            },
+            {
+              title: "Ethereum",
+              icon: "/Group 162875.png",
+              throughput: "~15-30 TPS",
+              fee: "~$6.00",
+              finality: "6 mins (32 blocks)",
+            },
+            {
+              title: "Solana",
+              icon: "/Group 162830 (1).png",
+              throughput: "Up to 4,000 TPS",
+              fee: "~$0.00025",
+              finality: "30 mins+",
+            },
+            {
+              title: "Polygon",
+              icon: "/Group 162838.png",
+              throughput: "~160 TPS",
+              fee: "~$0.15",
+              finality: "75 sec",
+            },
+          ].map((card, index) => (
+            <div
+              key={index}
+              className={`
+          relative
 
-          {/* Card 4: Polygon */}
-          <div className="flex-1 min-w-[250px] bg-[#141C33] border border-white/10 rounded-[16px] p-8 shadow-[0_0_20px_rgba(0,0,0,0.3)]">
-            <div className="flex items-center gap-3 mb-10">
-              <div className="w-10 h-10 bg-white rounded-[8px] flex items-center justify-center text-[#020B2D] font-bold text-[14px]">
-                POLY
+          w-[280px]
+          h-[400px]
+
+          rounded-[24px]
+
+          px-[24px]
+          pt-[20px]
+          pb-[20px]
+
+          overflow-hidden
+
+          border-2
+          border-transparent
+
+          ${
+            card.active
+              ? "shadow-[0_4px_12.3px_rgba(105,185,255,0.2)]"
+              : ""
+          }
+
+          transition-all
+          duration-300
+
+          hover:shadow-[0_4px_12.3px_rgba(105,185,255,0.2)]
+        `}
+              style={{
+                background: "linear-gradient(180deg, #4A556F 0%, #041C45 100%) padding-box, radial-gradient(circle at center, #8BC9D4 0%, #FFFFFF 50%, #8BC9D4 100%) border-box",
+              }}
+            >
+              {/* ================= INNER TOP LIGHT ================= */}
+              <div
+                className="
+            absolute
+            inset-0
+
+            rounded-[24px]
+
+            bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.10),transparent_45%)]
+
+            pointer-events-none
+          "
+              />
+
+              {/* ================= TOP ROW ================= */}
+              <div className="relative z-10 flex items-center gap-4 mb-5">
+                {/* ICON */}
+                <Image
+                  src={card.icon}
+                  alt={card.title}
+                  width={48}
+                  height={48}
+                  className="object-contain shrink-0"
+                />
+
+                {/* TITLE */}
+                <h3
+                  className="
+              font-Montserrat
+              font-bold
+
+              text-white
+
+              text-[18px]
+              leading-[100%]
+            "
+                >
+                  {card.title}
+                </h3>
               </div>
-              <span className="text-white font-bold text-[18px]">Polygon</span>
+
+              {/* ================= DIVIDER ================= */}
+              <div className="w-full h-[1px] bg-white/10 mb-6" />
+
+              {/* ================= CONTENT ================= */}
+              <div className="relative z-10 flex flex-col">
+                {/* THROUGHPUT */}
+                <div className="pb-4">
+                  <p className="text-white font-Montserrat font-medium text-[13px] uppercase mb-1">
+                    THROUGHPUT
+                  </p>
+                  <h4 className="font-Montserrat font-bold text-[16px] leading-[100%] text-transparent bg-clip-text bg-[linear-gradient(90deg,#0D7FF2_0%,#4EA5FF_50%,#38B6FF_100%)]">
+                    {card.throughput}
+                  </h4>
+                </div>
+
+                <div className="w-full h-[1px] bg-white/10 mb-4" />
+
+                {/* AVG FEE */}
+                <div className="pb-4">
+                  <p className="text-white font-Montserrat font-medium text-[13px] uppercase mb-1">
+                    AVG FEE
+                  </p>
+                  <h4 className="font-Montserrat font-bold text-[16px] leading-[100%] text-transparent bg-clip-text bg-[linear-gradient(90deg,#0D7FF2_0%,#4EA5FF_50%,#38B6FF_100%)]">
+                    {card.fee}
+                  </h4>
+                </div>
+
+                <div className="w-full h-[1px] bg-white/10 mb-4" />
+
+                {/* FINALITY */}
+                <div>
+                  <p className="text-white font-Montserrat font-medium text-[13px] uppercase mb-1">
+                    FINALITY
+                  </p>
+                  <h4 className="font-Montserrat font-bold text-[16px] leading-[100%] text-transparent bg-clip-text bg-[linear-gradient(90deg,#0D7FF2_0%,#4EA5FF_50%,#38B6FF_100%)]">
+                    {card.finality}
+                  </h4>
+                </div>
+              </div>
             </div>
-            <div className="flex flex-col gap-8">
-              <div>
-                <p className="text-white/60 text-[13px] font-medium tracking-wider mb-1">
-                  THROUGHPUT
-                </p>
-                <p className="text-[#4EA5FF] text-[16px] font-bold">~160 TPS</p>
-              </div>
-              <div>
-                <p className="text-white/60 text-[13px] font-medium tracking-wider mb-1">
-                  AVG FEE
-                </p>
-                <p className="text-[#4EA5FF] text-[16px] font-bold">~$0.15</p>
-              </div>
-              <div>
-                <p className="text-white/60 text-[13px] font-medium tracking-wider mb-1">
-                  FINALITY
-                </p>
-                <p className="text-[#4EA5FF] text-[16px] font-bold">75 sec</p>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 

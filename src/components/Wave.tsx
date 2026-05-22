@@ -71,7 +71,7 @@ const POOLS_DATA = [
 
 export default function Wave() {
   return (
-    <div className="w-full bg-[#020B2D] flex flex-col items-center font-Montserrat pb-24">
+    <div className="w-full bg-[#002F8D] flex flex-col items-center font-Montserrat pb-24">
       {/* ================= HERO SECTION ================= */}
       <section className="relative w-full h-[800px] overflow-hidden rounded-b-[40px] md:rounded-b-[50px] border-b border-l border-r border-[#4EA5FF]/30 -mb-[40px] md:-mb-[50px] z-10 flex items-center justify-center bg-[#020B2D]">
         {/* Background Image */}
@@ -401,462 +401,207 @@ export default function Wave() {
         </div>
       </section>
 
-      {/* ================= LIQUIDITY POOLS ================= */}
-
       <section
         className="
-    w-full
-    py-[90px]
-    px-4
-    md:px-10
-
-    flex
-    flex-col
-    items-center
-
-    bg-[#000D27]
-
     relative
-    z-30
+    w-full
+
     overflow-hidden
+
+    bg-[linear-gradient(180deg,#000D27_0%,#002F8D_100%)]
+
+    pt-[90px]
+    sm:pt-[110px]
+    lg:pt-[120px]
+
+    pb-[90px]
+    sm:pb-[110px]
+    lg:pb-[130px]
+
+    px-4
+    sm:px-6
+    lg:px-8
   "
       >
-        {/* ================= TABLE ================= */}
-        <div className="w-full max-w-[1100px] overflow-x-auto">
-          <table className="w-full min-w-[980px] border-collapse">
-            {/* ================= HEAD ================= */}
-            <thead>
-              <tr className="border-b border-white/10">
-                <th className="w-[120px] pb-[18px]" />
+        {/* ================= CONTENT ================= */}
+        <div
+          className="
+      max-w-[1440px]
+      mx-auto
 
-                <th className="pb-[18px] text-left text-[#4EA5FF] text-[16px] font-bold">
-                  Pools
-                </th>
-
-                <th className="pb-[18px] text-left text-[#4EA5FF] text-[16px] font-bold">
-                  Multiplier
-                </th>
-
-                <th className="pb-[18px] text-left text-[#4EA5FF] text-[16px] font-bold">
-                  APR
-                </th>
-
-                <th className="pb-[18px] text-left text-[#4EA5FF] text-[16px] font-bold">
-                  TVL
-                </th>
-
-                <th className="pb-[18px] text-right text-[#4EA5FF] text-[16px] font-bold">
-                  24h Vol
-                </th>
-              </tr>
-            </thead>
-
-            {/* ================= BODY ================= */}
-            <tbody>
-              {/* ================= ROW 1 ================= */}
-              <tr className="border-b border-white/10">
-                <td className="py-[18px]">
-                  <div className="flex items-center">
-                    <Image
-                      src="/logo-img/Group 162987.png"
-                      alt="WCO"
-                      width={28}
-                      height={28}
-                      className="object-contain"
-                    />
-                  </div>
-                </td>
-
-                <td className="py-[18px] text-white text-[15px]">
-                  WCO (Single Pool)
-                </td>
-
-                <td className="py-[18px] text-white/90 text-[15px]">1.0x</td>
-
-                <td className="py-[18px] text-white/90 text-[15px]">0.37%</td>
-
-                <td className="py-[18px] text-white/90 text-[15px]">
-                  $78,656.93
-                </td>
-
-                <td className="py-[18px] text-right text-white/90 text-[15px]">
-                  $1,890.11
-                </td>
-              </tr>
-
-              {/* ================= ROW 2 ================= */}
-              <tr className="border-b border-white/10">
-                <td className="py-[18px]">
-                  <div className="flex items-center">
-                    <Image
-                      src="/logo-img/Group 162989.png"
-                      alt="WAVE"
-                      width={28}
-                      height={28}
-                      className="object-contain"
-                    />
-
-                    <Image
-                      src="/logo-img/Group 162987.png"
-                      alt="WCO"
-                      width={28}
-                      height={28}
-                      className="object-contain -ml-2"
-                    />
-                  </div>
-                </td>
-
-                <td className="py-[18px] text-white text-[15px]">WAVE/WCO</td>
-
-                <td className="py-[18px] text-white/90 text-[15px]">2.5x</td>
-
-                <td className="py-[18px] text-white/90 text-[15px]">17.593%</td>
-
-                <td className="py-[18px] text-white/90 text-[15px]">
-                  $55,205.33
-                </td>
-
-                <td className="py-[18px] text-right text-white/90 text-[15px]">
-                  $1,222.32
-                </td>
-              </tr>
-
-              {/* ================= ROW 3 ================= */}
-              <tr className="border-b border-white/10">
-                <td className="py-[18px]">
-                  <div className="flex items-center">
-                    <Image
-                      src="/logo-img/Group 162993.png"
-                      alt="USDT"
-                      width={28}
-                      height={28}
-                      className="object-contain"
-                    />
-
-                    <Image
-                      src="/logo-img/Group 162987.png"
-                      alt="WCO"
-                      width={28}
-                      height={28}
-                      className="object-contain -ml-2"
-                    />
-                  </div>
-                </td>
-
-                <td className="py-[18px] text-white text-[15px]">USDTWCO</td>
-
-                <td className="py-[18px] text-white/90 text-[15px]">2.5x</td>
-
-                <td className="py-[18px] text-white/90 text-[15px]">12.508%</td>
-
-                <td className="py-[18px] text-white/90 text-[15px]">
-                  $19,411.89
-                </td>
-
-                <td className="py-[18px] text-right text-white/90 text-[15px]">
-                  $601.56
-                </td>
-              </tr>
-
-              {/* ================= ROW 4 ================= */}
-              <tr className="border-b border-white/10">
-                <td className="py-[18px]">
-                  <div className="flex items-center">
-                    <Image
-                      src="/logo-img/Group 162996.png"
-                      alt="USDC"
-                      width={28}
-                      height={28}
-                      className="object-contain"
-                    />
-
-                    <Image
-                      src="/logo-img/Group 162987.png"
-                      alt="WCO"
-                      width={28}
-                      height={28}
-                      className="object-contain -ml-2"
-                    />
-                  </div>
-                </td>
-
-                <td className="py-[18px] text-white text-[15px]">USDCWCO</td>
-
-                <td className="py-[18px] text-white/90 text-[15px]">1.0x</td>
-
-                <td className="py-[18px] text-white/90 text-[15px]">13.973%</td>
-
-                <td className="py-[18px] text-white/90 text-[15px]">
-                  $4,865.41
-                </td>
-
-                <td className="py-[18px] text-right text-white/90 text-[15px]">
-                  $62.52
-                </td>
-              </tr>
-
-              {/* ================= ROW 5 ================= */}
-              <tr className="border-b border-white/10">
-                <td className="py-[18px]">
-                  <div className="flex items-center">
-                    <Image
-                      src="/logo-img/Group 163000.png"
-                      alt="SOL"
-                      width={28}
-                      height={28}
-                      className="object-contain"
-                    />
-
-                    <Image
-                      src="/logo-img/Group 162987.png"
-                      alt="WCO"
-                      width={28}
-                      height={28}
-                      className="object-contain -ml-2"
-                    />
-                  </div>
-                </td>
-
-                <td className="py-[18px] text-white text-[15px]">SOL/WCO</td>
-
-                <td className="py-[18px] text-white/90 text-[15px]">1.0x</td>
-
-                <td className="py-[18px] text-white/90 text-[15px]">25.675%</td>
-
-                <td className="py-[18px] text-white/90 text-[15px]">
-                  $3,782.73
-                </td>
-
-                <td className="py-[18px] text-right text-white/90 text-[15px]">
-                  $0
-                </td>
-              </tr>
-
-              {/* ================= ROW 6 ================= */}
-              <tr className="border-b border-white/10">
-                <td className="py-[18px]">
-                  <div className="flex items-center">
-                    <Image
-                      src="/logo-img/Group 163003.png"
-                      alt="DOGE"
-                      width={28}
-                      height={28}
-                      className="object-contain"
-                    />
-
-                    <Image
-                      src="/logo-img/Group 162987.png"
-                      alt="WCO"
-                      width={28}
-                      height={28}
-                      className="object-contain -ml-2"
-                    />
-                  </div>
-                </td>
-
-                <td className="py-[18px] text-white text-[15px]">DOGE/WCO</td>
-
-                <td className="py-[18px] text-white/90 text-[15px]">1.0x</td>
-
-                <td className="py-[18px] text-white/90 text-[15px]">27.025%</td>
-
-                <td className="py-[18px] text-white/90 text-[15px]">
-                  $3,593.75
-                </td>
-
-                <td className="py-[18px] text-right text-white/90 text-[15px]">
-                  $0
-                </td>
-              </tr>
-
-              {/* ================= ROW 7 ================= */}
-              <tr className="border-b border-white/10">
-                <td className="py-[18px]">
-                  <div className="flex items-center">
-                    <Image
-                      src="/logo-img/Group 163008.png"
-                      alt="XRP"
-                      width={28}
-                      height={28}
-                      className="object-contain"
-                    />
-
-                    <Image
-                      src="/logo-img/Group 162987.png"
-                      alt="WCO"
-                      width={28}
-                      height={28}
-                      className="object-contain -ml-2"
-                    />
-                  </div>
-                </td>
-
-                <td className="py-[18px] text-white text-[15px]">XRP/WCO</td>
-
-                <td className="py-[18px] text-white/90 text-[15px]">1.0x</td>
-
-                <td className="py-[18px] text-white/90 text-[15px]">27.97%</td>
-
-                <td className="py-[18px] text-white/90 text-[15px]">
-                  $3,472.25
-                </td>
-
-                <td className="py-[18px] text-right text-white/90 text-[15px]">
-                  $3.71
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        {/* ================= BUTTONS ================= */}
-        <div className="mt-[70px] flex flex-wrap justify-center gap-[26px]">
-          {/* ADD LIQUIDITY */}
-          <button
+      flex
+      flex-col
+      items-center
+    "
+        >
+          {/* ================= HEADING ================= */}
+          <h2
             className="
-        group
+        text-center
 
-        w-[200px]
-        h-[50px]
+        font-Montserrat
+        font-bold
 
-        rounded-full
+        text-[32px]
+        sm:text-[40px]
+        lg:text-[50px]
 
-        bg-[linear-gradient(90deg,#0B6FC2_0%,#6BC5EA_100%)]
+        leading-[1.1]
+        lg:leading-[60px]
 
-        px-[8px]
-        pl-[22px]
+        tracking-[-0.03em]
 
-        flex
-        items-center
-        justify-between
+        text-transparent
+        bg-clip-text
 
-        shadow-[0_4px_20px_rgba(91,182,222,0.18)]
+        bg-[linear-gradient(90deg,#0D7FF2_0%,#B4E4FF_50%,#1F9DD8_100%)]
 
-        hover:brightness-110
-
-        transition-all
-        duration-300
+        mb-[50px]
+        sm:mb-[65px]
       "
           >
-            <span
-              className="
-          text-white
-          font-Montserrat
-          font-bold
-          text-[16px]
-          tracking-[-0.03em]
-        "
-            >
-              Add Liquidity
-            </span>
+            Live Ecosystem Pulse
+          </h2>
 
-            <span
-              className="
-          w-[32px]
-          h-[32px]
-
-          rounded-full
-
-          border
-          border-white
-
-          flex
-          items-center
-          justify-center
-
-          bg-white/10
-        "
-            >
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="white"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </span>
-          </button>
-
-          {/* HARVEST ALL */}
-          <button
+          {/* ================= STATS ================= */}
+          <div
             className="
-        group
-
-        w-[200px]
-        h-[50px]
-
-        rounded-full
-
-        bg-[linear-gradient(90deg,#0B6FC2_0%,#6BC5EA_100%)]
-
-        px-[8px]
-        pl-[22px]
+        w-full
 
         flex
+        flex-wrap
+
         items-center
-        justify-between
+        justify-center
 
-        shadow-[0_4px_20px_rgba(91,182,222,0.18)]
-
-        hover:brightness-110
-
-        transition-all
-        duration-300
+        gap-6
+        sm:gap-8
+        lg:gap-10
       "
           >
-            <span
-              className="
-          text-white
-          font-Montserrat
-          font-bold
-          text-[16px]
-          tracking-[-0.03em]
-        "
-            >
-              Harvest All
-            </span>
+            {/* ================= ITEM ================= */}
+            {[
+              {
+                value: "184M",
+                label: "Total Value Locked (M)",
+              },
+              {
+                value: "126M",
+                label: "WAVE Staked",
+              },
+              {
+                value: "15240",
+                label: "Active Stakers",
+              },
+              {
+                value: "23.4%",
+                label: "APY (avg)",
+              },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="
+            relative
 
-            <span
-              className="
-          w-[32px]
-          h-[32px]
+            w-[160px]
+            h-[160px]
 
-          rounded-full
+            sm:w-[190px]
+            sm:h-[190px]
 
-          border
-          border-white
+            md:w-[220px]
+            md:h-[220px]
 
-          flex
-          items-center
-          justify-center
+            lg:w-[263px]
+            lg:h-[263px]
 
-          bg-white/10
-        "
-            >
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="white"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
+            rounded-full
+
+            border-[10px]
+
+            border-[#1482F2]/40
+
+            flex
+            flex-col
+
+            items-center
+            justify-center
+
+            text-center
+
+            bg-transparent
+          "
               >
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </span>
-          </button>
+                {/* INNER GLOW */}
+                <div
+                  className="
+              absolute
+              inset-0
+
+              rounded-full
+
+              border-[2px]
+              border-[#ABE0FF]/20
+
+              shadow-[0_0_40px_rgba(20,130,242,0.12)]
+
+              pointer-events-none
+            "
+                />
+
+                {/* VALUE */}
+                <h3
+                  className="
+              relative
+              z-10
+
+              text-white
+
+              font-Montserrat
+              font-bold
+
+              text-[30px]
+              sm:text-[38px]
+              lg:text-[52px]
+
+              leading-none
+            "
+                >
+                  {item.value}
+                </h3>
+
+                {/* LABEL */}
+                <p
+                  className="
+              relative
+              z-10
+
+              mt-3
+
+              text-white/90
+
+              text-[10px]
+              sm:text-[11px]
+              lg:text-[13px]
+
+              leading-[1.4]
+
+              font-Montserrat
+              font-medium
+
+              max-w-[80%]
+            "
+                >
+                  {item.label}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* ================= STAKE LP TOKENS ================= */}
-      <section className="w-full pt-10 pb-20 px-4 md:px-10 flex flex-col items-center relative z-10">
+      <section className="w-full pt-20 pb-20 px-4 md:px-10 flex flex-col items-center relative z-10">
         <h2 className="text-[#4EA5FF] text-[32px] md:text-[44px] font-bold mb-16 text-center leading-[1.4] max-w-[800px]">
           Stake LP tokens, Harvest yield.
           <br />

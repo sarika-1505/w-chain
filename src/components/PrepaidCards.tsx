@@ -9,7 +9,9 @@ export default function PrepaidCards() {
         className="
     relative
     w-full
-    h-[800px]
+
+    min-h-[800px]
+    lg:h-[800px]
 
     overflow-hidden
 
@@ -90,17 +92,23 @@ export default function PrepaidCards() {
 
       mx-auto
 
-      px-6
+      px-5
+      sm:px-6
       md:px-[72px]
 
+      py-[90px]
+      sm:py-[110px]
+      lg:py-0
+
       flex
-      flex-col-reverse
+      flex-col
       lg:flex-row
 
       items-center
       justify-between
 
-      gap-[60px]
+      gap-[50px]
+      lg:gap-[60px]
     "
         >
           {/* ================= LEFT SIDE ================= */}
@@ -111,31 +119,40 @@ export default function PrepaidCards() {
 
         flex
         flex-col
-        items-start
+
+        items-center
+        lg:items-start
+
+        text-center
+        lg:text-left
+
+        order-1
       "
           >
+            {/* ================= HEADING ================= */}
             <h1
               className="
-    max-w-[649px]
+          max-w-[649px]
 
-    text-transparent
-    bg-clip-text
+          text-transparent
+          bg-clip-text
 
-    bg-[linear-gradient(90deg,#0D7FF2_0%,#B4E4FF_52%,#1F9DD8_100%)]
+          bg-[linear-gradient(90deg,#0D7FF2_0%,#B4E4FF_52%,#1F9DD8_100%)]
 
-    font-Montserrat
-    font-bold
+          font-Montserrat
+          font-bold
 
-    text-[40px]
-    sm:text-[45px]
-    lg:text-[50px]
+          text-[34px]
+          sm:text-[42px]
+          md:text-[48px]
+          lg:text-[50px]
 
-    leading-[1.16]
+          leading-[1.12]
 
-    tracking-[-0.03em]
+          tracking-[-0.03em]
 
-    mb-[30px]
-  "
+          mb-[30px]
+        "
             >
               Spend Crypto Anywhere
               <br />
@@ -147,10 +164,16 @@ export default function PrepaidCards() {
               className="
           flex
           flex-wrap
+
+          justify-center
+          lg:justify-start
+
           items-center
+
           gap-[14px]
         "
             >
+              {/* BTN 1 */}
               <Link href="#">
                 <Image
                   src="/btn1.png"
@@ -158,9 +181,12 @@ export default function PrepaidCards() {
                   width={194}
                   height={50}
                   className="
-              h-[50px]
+              h-[46px]
+              sm:h-[50px]
+
               w-auto
               object-contain
+
               hover:opacity-90
               transition-all
               duration-300
@@ -168,6 +194,7 @@ export default function PrepaidCards() {
                 />
               </Link>
 
+              {/* BTN 2 */}
               <Link href="#">
                 <Image
                   src="/btn2.png"
@@ -175,9 +202,12 @@ export default function PrepaidCards() {
                   width={194}
                   height={50}
                   className="
-              h-[50px]
+              h-[46px]
+              sm:h-[50px]
+
               w-auto
               object-contain
+
               hover:opacity-90
               transition-all
               duration-300
@@ -185,6 +215,7 @@ export default function PrepaidCards() {
                 />
               </Link>
 
+              {/* BTN 3 */}
               <Link href="#">
                 <Image
                   src="/btn3.png"
@@ -192,9 +223,12 @@ export default function PrepaidCards() {
                   width={220}
                   height={50}
                   className="
-              h-[50px]
+              h-[46px]
+              sm:h-[50px]
+
               w-auto
               object-contain
+
               hover:opacity-90
               transition-all
               duration-300
@@ -215,6 +249,8 @@ export default function PrepaidCards() {
         flex
         items-center
         justify-center
+
+        order-2
       "
           >
             <Image
@@ -225,7 +261,12 @@ export default function PrepaidCards() {
               priority
               className="
           w-full
-          max-w-[475px]
+
+          max-w-[280px]
+          sm:max-w-[360px]
+          md:max-w-[430px]
+          lg:max-w-[475px]
+
           h-auto
           object-contain
         "

@@ -224,7 +224,26 @@ export default function MultiValidatorBridge() {
       </section>
 
       {/* ================= TRADITIONAL BRIDGES SECTION ================= */}
-      <section className="w-full py-[100px] md:py-[120px] px-4 md:px-10 flex flex-col items-center relative z-10">
+      <section
+        className="
+    w-full
+
+    py-[90px]
+    sm:py-[100px]
+    lg:py-[120px]
+
+    px-4
+    sm:px-6
+    md:px-10
+
+    flex
+    flex-col
+    items-center
+
+    relative
+    z-10
+  "
+      >
         {/* ================= HEADING ================= */}
         <h2
           className="
@@ -233,18 +252,21 @@ export default function MultiValidatorBridge() {
       font-Montserrat
       font-bold
 
-      text-[34px]
-      sm:text-[42px]
+      text-[30px]
+      sm:text-[40px]
       lg:text-[50px]
 
-      leading-[1.1]
+      leading-[1.15]
       lg:leading-[60px]
 
       tracking-[-0.03em]
 
       text-center
 
-      mb-[90px]
+      mb-[60px]
+      sm:mb-[70px]
+      lg:mb-[90px]
+
       max-w-[908px]
     "
         >
@@ -255,15 +277,20 @@ export default function MultiValidatorBridge() {
         <div
           className="
       w-full
-      max-w-[728px]
+      max-w-[900px]
 
       flex
-      flex-row
+      flex-col
+      sm:flex-row
 
-      items-start
-      justify-between
+      items-center
+      sm:items-start
 
-      gap-[24px]
+      justify-center
+
+      gap-[50px]
+      sm:gap-[24px]
+      lg:gap-[40px]
 
       mx-auto
     "
@@ -273,10 +300,12 @@ export default function MultiValidatorBridge() {
             className="
         flex
         flex-col
+
         items-center
         text-center
 
-        w-[220px]
+        w-full
+        max-w-[220px]
       "
           >
             {/* ICON */}
@@ -284,8 +313,14 @@ export default function MultiValidatorBridge() {
               className="
           relative
 
-          w-[150px]
-          h-[150px]
+          w-[120px]
+          h-[120px]
+
+          sm:w-[135px]
+          sm:h-[135px]
+
+          lg:w-[150px]
+          lg:h-[150px]
 
           shrink-0
 
@@ -312,7 +347,10 @@ export default function MultiValidatorBridge() {
           font-bold
 
           text-[18px]
-          leading-[1.05]
+          sm:text-[17px]
+          lg:text-[18px]
+
+          leading-[1.1]
 
           tracking-[-0.03em]
 
@@ -330,10 +368,12 @@ export default function MultiValidatorBridge() {
             className="
         flex
         flex-col
+
         items-center
         text-center
 
-        w-[220px]
+        w-full
+        max-w-[220px]
       "
           >
             {/* ICON */}
@@ -341,8 +381,14 @@ export default function MultiValidatorBridge() {
               className="
           relative
 
-          w-[150px]
-          h-[150px]
+          w-[120px]
+          h-[120px]
+
+          sm:w-[135px]
+          sm:h-[135px]
+
+          lg:w-[150px]
+          lg:h-[150px]
 
           shrink-0
 
@@ -369,7 +415,10 @@ export default function MultiValidatorBridge() {
           font-bold
 
           text-[18px]
-          leading-[1.05]
+          sm:text-[17px]
+          lg:text-[18px]
+
+          leading-[1.1]
 
           tracking-[-0.03em]
 
@@ -387,10 +436,12 @@ export default function MultiValidatorBridge() {
             className="
         flex
         flex-col
+
         items-center
         text-center
 
-        w-[220px]
+        w-full
+        max-w-[220px]
       "
           >
             {/* ICON */}
@@ -398,8 +449,14 @@ export default function MultiValidatorBridge() {
               className="
           relative
 
-          w-[150px]
-          h-[150px]
+          w-[120px]
+          h-[120px]
+
+          sm:w-[135px]
+          sm:h-[135px]
+
+          lg:w-[150px]
+          lg:h-[150px]
 
           shrink-0
 
@@ -426,7 +483,10 @@ export default function MultiValidatorBridge() {
           font-bold
 
           text-[18px]
-          leading-[1.05]
+          sm:text-[17px]
+          lg:text-[18px]
+
+          leading-[1.1]
 
           tracking-[-0.03em]
 

@@ -364,7 +364,17 @@ export default function LegalDisclosure() {
           </h2>
           <div className="space-y-6 text-white/90 text-[16px] md:text-[18px] leading-[28px] md:leading-[32px] font-light">
             <p>
-              You agree that, in no event shall W Chain or any of its affiliates be liable to the User or any other party for any loss, damages, expenses, or costs whatsoever (including without limitation, any direct, indirect, special, incidental or consequential damages, loss of profits or loss opportunity) arising in connection with your use of this website, W Chain services or products or reliance on them. The User understands that he/she is solely responsible for decisions made in relation to the tokens and waive any right either under statutory laws, regulations or decrees, or under common law, to commence any action against W Chain under any cause of action.
+              You agree that, in no event shall W Chain or any of its affiliates
+              be liable to the User or any other party for any loss, damages,
+              expenses, or costs whatsoever (including without limitation, any
+              direct, indirect, special, incidental or consequential damages,
+              loss of profits or loss opportunity) arising in connection with
+              your use of this website, W Chain services or products or reliance
+              on them. The User understands that he/she is solely responsible
+              for decisions made in relation to the tokens and waive any right
+              either under statutory laws, regulations or decrees, or under
+              common law, to commence any action against W Chain under any cause
+              of action.
             </p>
           </div>
 
@@ -375,10 +385,18 @@ export default function LegalDisclosure() {
           </h2>
           <div className="space-y-6 text-white/90 text-[16px] md:text-[18px] leading-[28px] md:leading-[32px] font-light">
             <p>
-              No failure or delay by W Chain in exercising or enforcing any right or option under these Terms shall operate as a waiver thereof or limit, prejudice, or impair our right to take any action or to exercise any right as against you or render us responsible for any loss or damage arising therefrom.
+              No failure or delay by W Chain in exercising or enforcing any
+              right or option under these Terms shall operate as a waiver
+              thereof or limit, prejudice, or impair our right to take any
+              action or to exercise any right as against you or render us
+              responsible for any loss or damage arising therefrom.
             </p>
             <p>
-              If any one or more of the provisions in these Terms are deemed invalid, unlawful, or unenforceable in any respect under any applicable law, the validity, legality, and enforceability of the remaining provisions hereof shall not in any way be affected or impaired.
+              If any one or more of the provisions in these Terms are deemed
+              invalid, unlawful, or unenforceable in any respect under any
+              applicable law, the validity, legality, and enforceability of the
+              remaining provisions hereof shall not in any way be affected or
+              impaired.
             </p>
           </div>
 
@@ -389,7 +407,13 @@ export default function LegalDisclosure() {
           </h2>
           <div className="space-y-6 text-white/90 text-[16px] md:text-[18px] leading-[28px] md:leading-[32px] font-light">
             <p>
-              By accessing this website and/or using the associated services (if applicable), you agree that such access and/or use, as well as these terms and conditions, shall be governed by and construed in accordance with the laws of the British Virgin Islands. You further agree to submit to the process of arbitration in the British Virgin Islands and/or the jurisdiction of the election of WP Worldwide Limited.
+              By accessing this website and/or using the associated services (if
+              applicable), you agree that such access and/or use, as well as
+              these terms and conditions, shall be governed by and construed in
+              accordance with the laws of the British Virgin Islands. You
+              further agree to submit to the process of arbitration in the
+              British Virgin Islands and/or the jurisdiction of the election of
+              WP Worldwide Limited.
             </p>
           </div>
 
@@ -400,63 +424,209 @@ export default function LegalDisclosure() {
           </h2>
           <div className="space-y-6 text-white/90 text-[16px] md:text-[18px] leading-[28px] md:leading-[32px] font-light">
             <p>
-              A person who is not a party to these Terms or the specific agreements thereunder has no right under any applicable laws to enforce any terms herein.
+              A person who is not a party to these Terms or the specific
+              agreements thereunder has no right under any applicable laws to
+              enforce any terms herein.
             </p>
           </div>
 
           <div className="w-full h-[1px] bg-white/10 my-8"></div>
 
           <h2 className="text-[#2196F3] text-[20px] md:text-[28px] font-bold mb-2 uppercase leading-snug">
-            IF YOU DO NOT AGREE TO ANY OR ALL OF THE ABOVE, PLEASE DO NOT USE THE WEBSITE OR ANY OF THE W CHAIN SERVICES HEREIN AND EXIT IMMEDIATELY.
+            IF YOU DO NOT AGREE TO ANY OR ALL OF THE ABOVE, PLEASE DO NOT USE
+            THE WEBSITE OR ANY OF THE W CHAIN SERVICES HEREIN AND EXIT
+            IMMEDIATELY.
           </h2>
         </div>
       </section>
 
       {/* ================= CTA SECTION ================= */}
-      <section className="w-full pt-12 pb-44 px-4 md:px-10 flex justify-center relative z-10 bg-[#020B2D] -mb-[80px] lg:-mb-[100px]">
-        {/* Deep blue background extension to cover the overlapping footer corners */}
+      <section
+        className="
+    w-full
+
+    pt-[60px]
+    md:pt-12
+
+    pb-[140px]
+    md:pb-44
+
+    px-4
+    md:px-10
+
+    flex
+    justify-center
+
+    relative
+    z-10
+
+    bg-[#020B2D]
+
+    -mb-[60px]
+    md:-mb-[80px]
+    lg:-mb-[100px]
+  "
+      >
+        {/* Deep blue background extension */}
         <div className="absolute left-0 right-0 bottom-[-120px] h-[120px] bg-[#020B2D] -z-10 pointer-events-none" />
-        <div 
+
+        {/* ================= CTA BOX ================= */}
+        <div
           className="
-            max-w-[1206px] w-full h-[350px]
-            flex flex-col items-center justify-center
-            px-6 md:px-16 
-            rounded-[20px] 
-            border border-[#8BC9D4]/40
-            bg-[linear-gradient(180deg,rgba(255,255,255,0.05)_0%,rgba(28,96,107,0.3)_100%)]
-            text-center
-            relative
-            overflow-hidden
-          "
+      max-w-[1206px]
+      w-full
+
+      min-h-[350px]
+
+      flex
+      flex-col
+
+      items-center
+      justify-center
+
+      px-5
+      sm:px-8
+      md:px-16
+
+      py-10
+      md:py-12
+
+      rounded-[20px]
+
+      border
+      border-[#8BC9D4]/40
+
+      bg-[linear-gradient(180deg,rgba(255,255,255,0.05)_0%,rgba(28,96,107,0.3)_100%)]
+
+      text-center
+
+      relative
+      overflow-hidden
+    "
         >
-          {/* Subtle Glow Effect */}
+          {/* ================= GLOW EFFECT ================= */}
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(78,165,255,0.1),transparent_70%)]" />
 
-          <h2 className="relative z-10 text-[#2196F3] text-[32px] md:text-[48px] font-bold mb-4 leading-tight">
+          {/* ================= HEADING ================= */}
+          <h2
+            className="
+        relative
+        z-10
+
+        text-[#2196F3]
+
+        text-[28px]
+        sm:text-[34px]
+        md:text-[48px]
+
+        font-bold
+
+        leading-[1.15]
+        md:leading-tight
+
+        mb-4
+
+        max-w-[900px]
+      "
+          >
             Connect, Collaborate and Thrive
           </h2>
-          
-          <p className="relative z-10 text-white text-[16px] md:text-[19px] leading-[28px] max-w-[900px] mx-auto mb-8 font-light">
-            Ready to be part of something big? The W Chain community is waiting for you! 
-            Connect with fellow enthusiasts, contribute to exciting projects, and help shape the future of 
-            finance. Join us today and let's build the decentralized world together!
+
+          {/* ================= DESCRIPTION ================= */}
+          <p
+            className="
+        relative
+        z-10
+
+        text-white
+
+        text-[15px]
+        sm:text-[16px]
+        md:text-[19px]
+
+        leading-[26px]
+        sm:leading-[28px]
+        md:leading-[30px]
+
+        max-w-[900px]
+
+        mx-auto
+
+        mb-8
+
+        font-light
+      "
+          >
+            Ready to be part of something big? The W Chain community is waiting
+            for you! Connect with fellow enthusiasts, contribute to exciting
+            projects, and help shape the future of finance. Join us today and
+            let's build the decentralized world together!
           </p>
 
-          <button 
+          {/* ================= BUTTON ================= */}
+          <button
             className="
-              relative z-10
-              inline-flex items-center gap-3 
-              bg-gradient-to-r from-[#1C606B] to-[#2196F3] 
-              text-white text-[16px] md:text-[18px] font-medium 
-              px-10 py-3 
-              rounded-full 
-              hover:opacity-90 transition-opacity
-              border border-white/20
-            "
+        relative
+        z-10
+
+        inline-flex
+        items-center
+        justify-center
+
+        gap-3
+
+        bg-gradient-to-r
+        from-[#1C606B]
+        to-[#2196F3]
+
+        text-white
+
+        text-[15px]
+        sm:text-[16px]
+        md:text-[18px]
+
+        font-medium
+
+        px-7
+        sm:px-10
+
+        py-3
+
+        rounded-full
+
+        hover:opacity-90
+        transition-opacity
+
+        border
+        border-white/20
+      "
           >
             Join the Revolution
-            <div className="w-7 h-7 rounded-full border border-white flex items-center justify-center">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <div
+              className="
+          w-7
+          h-7
+
+          rounded-full
+
+          border
+          border-white
+
+          flex
+          items-center
+          justify-center
+        "
+            >
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
                 <path d="M5 12h14" />
                 <path d="m12 5 7 7-7 7" />
               </svg>
@@ -464,7 +634,6 @@ export default function LegalDisclosure() {
           </button>
         </div>
       </section>
-
     </div>
   );
 }

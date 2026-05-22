@@ -45,35 +45,35 @@ export default function WaveTokenomics() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
+  /* ================= AUTO SLIDE ================= */
   useEffect(() => {
-    const interval = setInterval(() => {
-      if (scrollRef.current) {
-        const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
-        // Calculate scroll amount dynamically based on the first card width + gap
-        const scrollAmount = scrollRef.current.children[0]
-          ? scrollRef.current.children[0].clientWidth + 24
-          : 340;
+    const container = scrollRef.current;
 
-        let newIndex = activeIndex + 1;
+    if (!container) return;
 
-        if (
-          scrollLeft + clientWidth >= scrollWidth - 10 ||
-          newIndex >= SUPPLY_CARDS.length
-        ) {
-          scrollRef.current.scrollTo({ left: 0, behavior: "smooth" });
-          setActiveIndex(0);
-        } else {
-          scrollRef.current.scrollBy({
-            left: scrollAmount,
-            behavior: "smooth",
-          });
-          setActiveIndex(newIndex);
-        }
-      }
-    }, 20000); // 20 seconds
+    let index = 0;
 
-    return () => clearInterval(interval);
-  }, [activeIndex]);
+    const autoSlide = setInterval(() => {
+      const cards = container.querySelectorAll(".supply-card");
+
+      if (!cards.length) return;
+
+      index = (index + 1) % cards.length;
+
+      const targetCard = cards[index] as HTMLElement;
+
+      container.scrollTo({
+        left:
+          targetCard.offsetLeft -
+          (container.offsetWidth - targetCard.offsetWidth) / 2,
+        behavior: "smooth",
+      });
+
+      setActiveIndex(index);
+    }, 3000);
+
+    return () => clearInterval(autoSlide);
+  }, []);
 
   return (
     <div className="w-full bg-[#020B2D] min-h-screen">
@@ -202,44 +202,182 @@ export default function WaveTokenomics() {
         </div>
       </section>
 
-      {/* ================= TOTAL SUPPLY SECTION ================= */}
-      <section className="w-full py-20 flex flex-col items-center bg-[linear-gradient(180deg,#020B2D_0%,#002B7F_100%)] border-t border-white/5 overflow-hidden">
-        <h2 className="text-[#4EA5FF] text-[32px] md:text-[42px] font-bold text-center mb-12 px-4">
+      <section
+        className="
+    w-full
+
+    py-16
+    md:py-20
+
+    flex
+    flex-col
+    items-center
+
+    bg-[linear-gradient(180deg,#020B2D_0%,#002B7F_100%)]
+
+    border-t
+    border-white/5
+
+    overflow-hidden
+  "
+      >
+        {/* ================= HEADING ================= */}
+        <h2
+          className="
+      text-[#4EA5FF]
+
+      text-[28px]
+      sm:text-[34px]
+      md:text-[42px]
+
+      font-bold
+
+      text-center
+
+      leading-[1.2]
+
+      mb-10
+      md:mb-12
+
+      px-4
+    "
+        >
           Total Supply & Emission Structure
         </h2>
 
-        {/* Carousel Container */}
+        {/* ================= CAROUSEL ================= */}
         <div className="relative w-full max-w-[1440px] mx-auto">
           <div
             ref={scrollRef}
-            className="flex overflow-x-auto gap-6 md:gap-8 pb-12 pt-4 px-4 md:px-10 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden"
-            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+            className="
+        flex
+
+        overflow-x-auto
+
+        gap-5
+        md:gap-8
+
+        pb-10
+        pt-4
+
+        px-4
+        md:px-10
+
+        snap-x
+        snap-mandatory
+
+        scroll-smooth
+
+        [&::-webkit-scrollbar]:hidden
+      "
+            style={{
+              scrollbarWidth: "none",
+              msOverflowStyle: "none",
+            }}
           >
             {SUPPLY_CARDS.map((card) => (
               <div
                 key={card.id}
-                className="snap-start shrink-0 w-[85vw] sm:w-[calc(50%-16px)] lg:w-[calc(25%-24px)] min-h-[340px] rounded-[22px] p-[1.5px] relative bg-gradient-to-b from-[#4EA5FF]/80 via-[#4EA5FF]/20 to-[#4EA5FF]/5 shadow-[0_0_20px_rgba(78,165,255,0.15)] transition-transform duration-300"
-              >
-                {/* Card inner */}
-                <div className="w-full h-full bg-[linear-gradient(180deg,#152E5E_0%,#081736_100%)] rounded-[20px] p-6 md:p-8 flex flex-col">
-                  {/* Icon */}
-                  <div className="w-12 h-12 rounded-[10px] border border-[#4EA5FF]/50 flex items-center justify-center mb-6 relative">
-                    <Image
-                      src={card.icon}
-                      alt={card.title}
-                      width={24}
-                      height={24}
-                      className="object-contain"
-                    />
-                  </div>
+                className="
+            supply-card
 
-                  {/* Title */}
-                  <h4 className="text-[#4EA5FF] text-[18px] md:text-[20px] font-bold mb-4 leading-snug">
+            snap-center
+
+            shrink-0
+
+            w-[88vw]
+            sm:w-[70vw]
+            md:w-[48%]
+            lg:w-[calc(25%-24px)]
+
+            max-w-[360px]
+            lg:max-w-none
+
+            min-h-[320px]
+            md:min-h-[340px]
+
+            rounded-[22px]
+
+            p-[1.5px]
+
+            relative
+
+            bg-gradient-to-b
+            from-[#4EA5FF]/80
+            via-[#4EA5FF]/20
+            to-[#4EA5FF]/5
+
+            shadow-[0_0_20px_rgba(78,165,255,0.15)]
+
+            transition-transform
+            duration-300
+          "
+              >
+                {/* ================= CARD INNER ================= */}
+                <div
+                  className="
+              w-full
+              h-full
+
+              bg-[linear-gradient(180deg,#152E5E_0%,#081736_100%)]
+
+              rounded-[20px]
+
+              p-5
+              md:p-8
+
+              flex
+              flex-col
+            "
+                >
+                  {/* ================= ICON ================= */}
+                  <Image
+                    src={card.icon}
+                    alt={card.title}
+                    width={42}
+                    height={42}
+                    className="
+                object-contain
+
+                mb-5
+                md:mb-6
+
+                w-[42px]
+                h-[42px]
+              "
+                  />
+
+                  {/* ================= TITLE ================= */}
+                  <h4
+                    className="
+                text-[#4EA5FF]
+
+                text-[17px]
+                md:text-[20px]
+
+                font-bold
+
+                mb-4
+
+                leading-snug
+              "
+                  >
                     {card.title}
                   </h4>
 
-                  {/* Description */}
-                  <p className="text-white/80 text-[14px] md:text-[15px] leading-relaxed font-light">
+                  {/* ================= DESCRIPTION ================= */}
+                  <p
+                    className="
+                text-white/80
+
+                text-[13px]
+                md:text-[15px]
+
+                leading-relaxed
+
+                font-light
+              "
+                  >
                     {card.description}
                   </p>
                 </div>
@@ -247,12 +385,36 @@ export default function WaveTokenomics() {
             ))}
           </div>
 
-          {/* Dots Indicator */}
-          <div className="flex justify-center gap-3 mt-4 mb-12">
+          {/* ================= DOTS ================= */}
+          <div
+            className="
+        flex
+        justify-center
+
+        gap-2.5
+        md:gap-3
+
+        mt-2
+        md:mt-4
+
+        mb-6
+        md:mb-12
+      "
+          >
             {SUPPLY_CARDS.map((_, i) => (
               <div
                 key={i}
-                className={`w-2.5 h-2.5 rounded-full transition-colors duration-300 ${activeIndex === i ? "bg-[#4EA5FF]" : "bg-[#1A3B66]"}`}
+                className={`
+            rounded-full
+            transition-all
+            duration-300
+
+            ${
+              activeIndex === i
+                ? "bg-[#4EA5FF] w-3 h-3"
+                : "bg-[#1A3B66] w-2.5 h-2.5"
+            }
+          `}
               />
             ))}
           </div>
@@ -533,273 +695,1058 @@ export default function WaveTokenomics() {
       </section>
 
       {/* ================= VALUE ACCRUAL MECHANISMS ================= */}
-      <section className="w-full py-20 px-4 md:px-10 flex flex-col items-center bg-[#020B2D] border-t border-white/5">
-        <h2 className="text-[#4EA5FF] text-[32px] md:text-[42px] font-bold text-center mb-4">
+      <section className="w-full py-16 md:py-20 px-4 md:px-10 flex flex-col items-center bg-[#020B2D] border-t border-white/5">
+        {/* ================= HEADING ================= */}
+        <h2
+          className="
+      text-transparent
+      bg-clip-text
+
+      bg-[linear-gradient(90deg,#0D7FF2_0%,#B4E4FF_50%,#1F9DD8_100%)]
+
+      text-[32px]
+      md:text-[50px]
+
+      font-bold
+
+      text-center
+
+      leading-[1.1]
+
+      mb-4
+    "
+        >
           Value Accrual Mechanisms
         </h2>
-        <p className="text-center text-white text-[16px] md:text-[18px] leading-relaxed max-w-[800px] mb-12">
+
+        {/* ================= SUBTEXT ================= */}
+        <p
+          className="
+      text-center
+      text-white
+
+      text-[15px]
+      md:text-[18px]
+
+      leading-relaxed
+
+      max-w-[820px]
+
+      mb-10
+      md:mb-14
+
+      px-2
+    "
+        >
           The value of WAVE is designed to accrue through several interconnected
           mechanisms:
         </p>
 
-        <div className="w-full max-w-[1200px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Card 1 */}
-          <div className="bg-[#0D1E3F] rounded-[20px] p-8 border border-white/10 shadow-[0_0_15px_rgba(0,0,0,0.2)]">
-            <div className="w-12 h-12 rounded-[10px] border border-[#4EA5FF]/30 flex items-center justify-center mb-6">
+        {/* ================= CARDS ================= */}
+        <div
+          className="
+      w-full
+      max-w-[1200px]
+
+      grid
+      grid-cols-1
+      sm:grid-cols-2
+      lg:grid-cols-3
+
+      gap-5
+      md:gap-6
+    "
+        >
+          {/* ================= CARD 1 ================= */}
+          <div
+            className="
+        rounded-[20px]
+
+        p-[1px]
+
+        bg-[linear-gradient(180deg,#8BC9D4_0%,#FFFFFF_50%,#8BC9D4_100%)]
+
+        shadow-[0_0_18px_rgba(139,201,212,0.15)]
+      "
+          >
+            <div
+              className="
+          h-full
+
+          rounded-[19px]
+
+          bg-[linear-gradient(180deg,#4E5979_0%,#08214B_100%)]
+
+          p-5
+          md:p-6
+
+          min-h-[230px]
+          md:min-h-[250px]
+        "
+            >
               <Image
-                src="/Group 163303.png"
+                src="/w-chain/Group 163303 (2).png"
                 alt="Liquidity Demand"
-                width={24}
-                height={24}
-                className="object-contain"
+                width={50}
+                height={50}
+                className="
+            w-[50px]
+            h-[50px]
+
+            object-contain
+
+            mb-5
+          "
               />
+
+              <h4
+                className="
+            text-[#4EA5FF]
+
+            text-[20px]
+            md:text-[22px]
+
+            font-bold
+
+            leading-[1.2]
+
+            mb-3
+          "
+              >
+                Demand from Liquidity
+                <br />
+                Providers
+              </h4>
+
+              <p
+                className="
+            text-white/90
+
+            text-[15px]
+            md:text-[16px]
+
+            leading-[1.5]
+          "
+              >
+                LPs are incentivized to earn WAVE, creating constant demand.
+              </p>
             </div>
-            <h4 className="text-[#4EA5FF] text-[18px] font-bold mb-3 leading-snug">
-              Demand from Liquidity
-              <br />
-              Providers
-            </h4>
-            <p className="text-white/80 text-[14px] leading-relaxed font-light">
-              LPs are incentivized to earn WAVE, creating constant demand.
-            </p>
           </div>
-          {/* Card 2 */}
-          <div className="bg-[#0D1E3F] rounded-[20px] p-8 border border-white/10 shadow-[0_0_15px_rgba(0,0,0,0.2)]">
-            <div className="w-12 h-12 rounded-[10px] border border-[#4EA5FF]/30 flex items-center justify-center mb-6">
+
+          {/* ================= CARD 2 ================= */}
+          <div
+            className="
+        rounded-[20px]
+
+        p-[1px]
+
+        bg-[linear-gradient(180deg,#8BC9D4_0%,#FFFFFF_50%,#8BC9D4_100%)]
+
+        shadow-[0_0_18px_rgba(139,201,212,0.15)]
+      "
+          >
+            <div
+              className="
+          h-full
+
+          rounded-[19px]
+
+          bg-[linear-gradient(180deg,#4E5979_0%,#08214B_100%)]
+
+          p-5
+          md:p-6
+
+          min-h-[230px]
+          md:min-h-[250px]
+        "
+            >
               <Image
-                src="/Group 163361.png"
+                src="/w-chain/Group 163361.png"
                 alt="Staking Demand"
-                width={24}
-                height={24}
-                className="object-contain"
+                width={50}
+                height={50}
+                className="w-[50px] h-[50px] object-contain mb-5"
               />
+
+              <h4
+                className="
+            text-[#4EA5FF]
+
+            text-[20px]
+            md:text-[22px]
+
+            font-bold
+
+            leading-[1.2]
+
+            mb-3
+          "
+              >
+                Staking Demand
+              </h4>
+
+              <p
+                className="
+            text-white/90
+
+            text-[15px]
+            md:text-[16px]
+
+            leading-[1.5]
+          "
+              >
+                A high target APY for WAVE staking encourages users to hold and
+                stake their tokens, reducing circulating supply.
+              </p>
             </div>
-            <h4 className="text-[#4EA5FF] text-[18px] font-bold mb-3 leading-snug">
-              Staking Demand
-            </h4>
-            <p className="text-white/80 text-[14px] leading-relaxed font-light">
-              A high target APY for WAVE staking encourages users to hold and
-              stake their tokens, reducing circulating supply.
-            </p>
           </div>
-          {/* Card 3 */}
-          <div className="bg-[#0D1E3F] rounded-[20px] p-8 border border-white/10 shadow-[0_0_15px_rgba(0,0,0,0.2)]">
-            <div className="w-12 h-12 rounded-[10px] border border-[#4EA5FF]/30 flex items-center justify-center mb-6">
+
+          {/* ================= CARD 3 ================= */}
+          <div
+            className="
+        rounded-[20px]
+
+        p-[1px]
+
+        bg-[linear-gradient(180deg,#8BC9D4_0%,#FFFFFF_50%,#8BC9D4_100%)]
+
+        shadow-[0_0_18px_rgba(139,201,212,0.15)]
+      "
+          >
+            <div
+              className="
+          h-full
+
+          rounded-[19px]
+
+          bg-[linear-gradient(180deg,#4E5979_0%,#08214B_100%)]
+
+          p-5
+          md:p-6
+
+          min-h-[230px]
+          md:min-h-[250px]
+        "
+            >
               <Image
-                src="/Group 163386.png"
+                src="/w-chain/Group 163303.png"
                 alt="Trading Volume"
-                width={24}
-                height={24}
-                className="object-contain"
+                width={50}
+                height={50}
+                className="w-[50px] h-[50px] object-contain mb-5"
               />
+
+              <h4
+                className="
+            text-[#4EA5FF]
+
+            text-[20px]
+            md:text-[22px]
+
+            font-bold
+
+            leading-[1.2]
+
+            mb-3
+          "
+              >
+                Trading Volume
+              </h4>
+
+              <p
+                className="
+            text-white/90
+
+            text-[15px]
+            md:text-[16px]
+
+            leading-[1.5]
+          "
+              >
+                Increased trading activity on W-Swap, particularly in WAVE
+                pairs, contributes to its perceived value and liquidity.
+              </p>
             </div>
-            <h4 className="text-[#4EA5FF] text-[18px] font-bold mb-3 leading-snug">
-              Trading Volume
-            </h4>
-            <p className="text-white/80 text-[14px] leading-relaxed font-light">
-              Increased trading activity on W-Swap, particularly in WAVE pairs,
-              contributes to its perceived value and liquidity.
-            </p>
           </div>
-          {/* Card 4 */}
-          <div className="bg-[#0D1E3F] rounded-[20px] p-8 border border-white/10 shadow-[0_0_15px_rgba(0,0,0,0.2)]">
-            <div className="w-12 h-12 rounded-[10px] border border-[#4EA5FF]/30 flex items-center justify-center mb-6">
+
+          {/* ================= CARD 4 ================= */}
+          <div
+            className="
+        rounded-[20px]
+
+        p-[1px]
+
+        bg-[linear-gradient(180deg,#8BC9D4_0%,#FFFFFF_50%,#8BC9D4_100%)]
+
+        shadow-[0_0_18px_rgba(139,201,212,0.15)]
+      "
+          >
+            <div
+              className="
+          h-full
+
+          rounded-[19px]
+
+          bg-[linear-gradient(180deg,#4E5979_0%,#08214B_100%)]
+
+          p-5
+          md:p-6
+
+          min-h-[230px]
+          md:min-h-[250px]
+        "
+            >
               <Image
-                src="/Group 163362.png"
-                alt="Treasury Accumulation"
-                width={24}
-                height={24}
-                className="object-contain"
+                src="/w-chain/Group 163303 (3).png"
+                alt="Treasury"
+                width={50}
+                height={50}
+                className="w-[50px] h-[50px] object-contain mb-5"
               />
+
+              <h4
+                className="
+            text-[#4EA5FF]
+
+            text-[20px]
+            md:text-[22px]
+
+            font-bold
+
+            leading-[1.2]
+
+            mb-3
+          "
+              >
+                Treasury Accumulation
+              </h4>
+
+              <p
+                className="
+            text-white/90
+
+            text-[15px]
+            md:text-[16px]
+
+            leading-[1.5]
+          "
+              >
+                The protocol treasury accumulates 10% of all WAVE emissions,
+                strengthening the ecosystem backbone.
+              </p>
             </div>
-            <h4 className="text-[#4EA5FF] text-[18px] font-bold mb-3 leading-snug">
-              Treasury Accumulation
-            </h4>
-            <p className="text-white/80 text-[14px] leading-relaxed font-light">
-              The protocol treasury accumulates 10% of all WAVE emissions, which
-              can be used to lock WCO liquidity or for strategic investments,
-              strengthening the ecosystem&apos;s backbone.
-            </p>
           </div>
-          {/* Card 5 */}
-          <div className="bg-[#0D1E3F] rounded-[20px] p-8 border border-white/10 shadow-[0_0_15px_rgba(0,0,0,0.2)]">
-            <div className="w-12 h-12 rounded-[10px] border border-[#4EA5FF]/30 flex items-center justify-center mb-6">
+
+          {/* ================= CARD 5 ================= */}
+          <div
+            className="
+        rounded-[20px]
+
+        p-[1px]
+
+        bg-[linear-gradient(180deg,#8BC9D4_0%,#FFFFFF_50%,#8BC9D4_100%)]
+
+        shadow-[0_0_18px_rgba(139,201,212,0.15)]
+      "
+          >
+            <div
+              className="
+          h-full
+
+          rounded-[19px]
+
+          bg-[linear-gradient(180deg,#4E5979_0%,#08214B_100%)]
+
+          p-5
+          md:p-6
+
+          min-h-[230px]
+          md:min-h-[250px]
+        "
+            >
               <Image
-                src="/Group 163387.png"
-                alt="Governance Influence"
-                width={24}
-                height={24}
-                className="object-contain"
+                src="/w-chain/Group 163428.png"
+                alt="Governance"
+                width={50}
+                height={50}
+                className="w-[50px] h-[50px] object-contain mb-5"
               />
+
+              <h4
+                className="
+            text-[#4EA5FF]
+
+            text-[20px]
+            md:text-[22px]
+
+            font-bold
+
+            leading-[1.2]
+
+            mb-3
+          "
+              >
+                Governance Influence
+              </h4>
+
+              <p
+                className="
+            text-white/90
+
+            text-[15px]
+            md:text-[16px]
+
+            leading-[1.5]
+          "
+              >
+                The power to shape the future of W-Swap and the broader
+                ecosystem provides intrinsic value to WAVE.
+              </p>
             </div>
-            <h4 className="text-[#4EA5FF] text-[18px] font-bold mb-3 leading-snug">
-              Governance Influence
-            </h4>
-            <p className="text-white/80 text-[14px] leading-relaxed font-light">
-              The power to shape the future of W-Swap and the broader W-Chain
-              ecosystem provides intrinsic value to WAVE
-            </p>
           </div>
-          {/* Card 6 */}
-          <div className="bg-[#0D1E3F] rounded-[20px] p-8 border border-white/10 shadow-[0_0_15px_rgba(0,0,0,0.2)]">
-            <div className="w-12 h-12 rounded-[10px] border border-[#4EA5FF]/30 flex items-center justify-center mb-6">
+
+          {/* ================= CARD 6 ================= */}
+          <div
+            className="
+        rounded-[20px]
+
+        p-[1px]
+
+        bg-[linear-gradient(180deg,#8BC9D4_0%,#FFFFFF_50%,#8BC9D4_100%)]
+
+        shadow-[0_0_18px_rgba(139,201,212,0.15)]
+      "
+          >
+            <div
+              className="
+          h-full
+
+          rounded-[19px]
+
+          bg-[linear-gradient(180deg,#4E5979_0%,#08214B_100%)]
+
+          p-5
+          md:p-6
+
+          min-h-[230px]
+          md:min-h-[250px]
+        "
+            >
               <Image
-                src="/Group 163390.png"
-                alt="Ecosystem Growth"
-                width={24}
-                height={24}
-                className="object-contain"
+                src="/w-chain/Group 163303 (4).png"
+                alt="Growth"
+                width={50}
+                height={50}
+                className="w-[50px] h-[50px] object-contain mb-5"
               />
+
+              <h4
+                className="
+            text-[#4EA5FF]
+
+            text-[20px]
+            md:text-[22px]
+
+            font-bold
+
+            leading-[1.2]
+
+            mb-3
+          "
+              >
+                Ecosystem Growth
+              </h4>
+
+              <p
+                className="
+            text-white/90
+
+            text-[15px]
+            md:text-[16px]
+
+            leading-[1.5]
+          "
+              >
+                As W-Chain and W-Swap grow in adoption and TVL, the utility and
+                demand for WAVE are expected to rise.
+              </p>
             </div>
-            <h4 className="text-[#4EA5FF] text-[18px] font-bold mb-3 leading-snug">
-              Ecosystem Growth
-            </h4>
-            <p className="text-white/80 text-[14px] leading-relaxed font-light">
-              As W-Chain and W-Swap grow in adoption and TVL, the utility and
-              demand for WAVE are expected to rise.
-            </p>
           </div>
         </div>
       </section>
 
       {/* ================= DEFLATIONARY MECHANISMS ================= */}
-      <section className="w-full py-20 px-4 md:px-10 flex flex-col items-center bg-[#020B2D] border-t border-white/5">
-        <h2 className="text-[#4EA5FF] text-[32px] md:text-[42px] font-bold text-center mb-4">
+      <section className="w-full py-16 md:py-20 px-4 md:px-10 flex flex-col items-center bg-[#020B2D] border-t border-white/5">
+        {/* ================= HEADING ================= */}
+        <h2
+          className="
+      text-transparent
+      bg-clip-text
+
+      bg-[linear-gradient(90deg,#0D7FF2_0%,#B4E4FF_50%,#1F9DD8_100%)]
+
+      text-[34px]
+      sm:text-[42px]
+      md:text-[50px]
+
+      font-Montserrat
+      font-bold
+
+      leading-[1.1]
+
+      tracking-[-0.03em]
+
+      text-center
+
+      max-w-[1161px]
+
+      mb-6
+    "
+        >
           Deflationary Mechanisms (Future Possibilities)
         </h2>
-        <p className="text-center text-white text-[16px] md:text-[18px] leading-relaxed max-w-[900px] mb-12">
+
+        {/* ================= SUBTITLE ================= */}
+        <p
+          className="
+      text-white
+
+      text-center
+
+      text-[18px]
+      md:text-[25px]
+
+      leading-[1.4]
+
+      font-Montserrat
+      font-medium
+
+      max-w-[980px]
+
+      mb-10
+      md:mb-14
+    "
+        >
           To counter potential inflation from continuous emissions and create
-          long-term scarcity,
-          <br className="hidden md:block" />
-          future deflationary mechanisms could be introduced via DAO governance:
+          long-term scarcity, future deflationary mechanisms could be introduced
+          via DAO governance:
         </p>
 
-        <div className="w-full max-w-[1200px] grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Card 1 */}
-          <div className="bg-[linear-gradient(180deg,#152E5E_0%,#081736_100%)] rounded-[20px] p-8 border border-[#4EA5FF]/40 shadow-[0_0_15px_rgba(78,165,255,0.1)]">
-            <div className="w-12 h-12 rounded-[10px] border border-[#4EA5FF]/40 flex items-center justify-center mb-6">
+        {/* ================= CARDS ================= */}
+        <div
+          className="
+      w-full
+      max-w-[1200px]
+
+      grid
+      grid-cols-1
+      md:grid-cols-2
+      lg:grid-cols-3
+
+      gap-5
+      md:gap-6
+    "
+        >
+          {/* ================= CARD 1 ================= */}
+          <div
+            className="
+        rounded-[20px]
+
+        p-[1px]
+
+        bg-[linear-gradient(180deg,#8BC9D4_0%,#FFFFFF_50%,#8BC9D4_100%)]
+
+        shadow-[0_0_18px_rgba(139,201,212,0.12)]
+      "
+          >
+            <div
+              className="
+          h-full
+
+          rounded-[19px]
+
+          bg-[linear-gradient(180deg,#4E5979_0%,#08214B_100%)]
+
+          p-6
+          md:p-8
+
+          min-h-[260px]
+          md:min-h-[280px]
+        "
+            >
+              {/* ICON */}
               <Image
-                src="/Group 163364.png"
+                src="/1-wchain.png"
                 alt="Buyback and Burn"
-                width={24}
-                height={24}
-                className="object-contain"
+                width={50}
+                height={50}
+                className="
+            w-[50px]
+            h-[50px]
+
+            object-contain
+
+            mb-6
+          "
               />
+
+              {/* TITLE */}
+              <h4
+                className="
+            text-[#4EA5FF]
+
+            text-[22px]
+            md:text-[24px]
+
+            font-bold
+
+            leading-[1.2]
+
+            mb-4
+          "
+              >
+                Buyback and Burn
+              </h4>
+
+              {/* DESCRIPTION */}
+              <p
+                className="
+            text-white/90
+
+            text-[15px]
+            md:text-[16px]
+
+            leading-[1.6]
+
+            font-light
+          "
+              >
+                A portion of W-Swap trading fees or protocol revenue could be
+                used to buy back WAVE tokens from the market and permanently
+                remove them from circulation.
+              </p>
             </div>
-            <h4 className="text-[#4EA5FF] text-[18px] font-bold mb-3 leading-snug">
-              Buyback and Burn
-            </h4>
-            <p className="text-white/80 text-[14px] leading-relaxed font-light">
-              A portion of W-Swap trading fees or protocol revenue could be used
-              to buy back WAVE tokens from the market and permanently remove
-              them from circulation.
-            </p>
           </div>
-          {/* Card 2 */}
-          <div className="bg-[linear-gradient(180deg,#152E5E_0%,#081736_100%)] rounded-[20px] p-8 border border-[#4EA5FF]/40 shadow-[0_0_15px_rgba(78,165,255,0.1)]">
-            <div className="w-12 h-12 rounded-[10px] border border-[#4EA5FF]/40 flex items-center justify-center mb-6">
+
+          {/* ================= CARD 2 ================= */}
+          <div
+            className="
+        rounded-[20px]
+
+        p-[1px]
+
+        bg-[linear-gradient(180deg,#8BC9D4_0%,#FFFFFF_50%,#8BC9D4_100%)]
+
+        shadow-[0_0_18px_rgba(139,201,212,0.12)]
+      "
+          >
+            <div
+              className="
+          h-full
+
+          rounded-[19px]
+
+          bg-[linear-gradient(180deg,#4E5979_0%,#08214B_100%)]
+
+          p-6
+          md:p-8
+
+          min-h-[260px]
+          md:min-h-[280px]
+        "
+            >
+              {/* ICON */}
               <Image
-                src="/Group 163365.png"
+                src="/2-wchain.png"
                 alt="Fee Burns"
-                width={24}
-                height={24}
-                className="object-contain"
+                width={50}
+                height={50}
+                className="
+            w-[50px]
+            h-[50px]
+
+            object-contain
+
+            mb-6
+          "
               />
+
+              {/* TITLE */}
+              <h4
+                className="
+            text-[#4EA5FF]
+
+            text-[22px]
+            md:text-[24px]
+
+            font-bold
+
+            leading-[1.2]
+
+            mb-4
+          "
+              >
+                Fee Burns
+              </h4>
+
+              {/* DESCRIPTION */}
+              <p
+                className="
+            text-white/90
+
+            text-[15px]
+            md:text-[16px]
+
+            leading-[1.6]
+
+            font-light
+          "
+              >
+                A small percentage of transaction fees (e.g., from swaps or
+                bridge transfers involving WAVE) could be directly burned.
+              </p>
             </div>
-            <h4 className="text-[#4EA5FF] text-[18px] font-bold mb-3 leading-snug">
-              Fee Burns
-            </h4>
-            <p className="text-white/80 text-[14px] leading-relaxed font-light">
-              A small percentage of transaction fees (e.g., from swaps or bridge
-              transfers involving WAVE) could be directly burned.
-            </p>
           </div>
-          {/* Card 3 */}
-          <div className="bg-[linear-gradient(180deg,#152E5E_0%,#081736_100%)] rounded-[20px] p-8 border border-[#4EA5FF]/40 shadow-[0_0_15px_rgba(78,165,255,0.1)]">
-            <div className="w-12 h-12 rounded-[10px] border border-[#4EA5FF]/40 flex items-center justify-center mb-6">
+
+          {/* ================= CARD 3 ================= */}
+          <div
+            className="
+        rounded-[20px]
+
+        p-[1px]
+
+        bg-[linear-gradient(180deg,#8BC9D4_0%,#FFFFFF_50%,#8BC9D4_100%)]
+
+        shadow-[0_0_18px_rgba(139,201,212,0.12)]
+      "
+          >
+            <div
+              className="
+          h-full
+
+          rounded-[19px]
+
+          bg-[linear-gradient(180deg,#4E5979_0%,#08214B_100%)]
+
+          p-6
+          md:p-8
+
+          min-h-[260px]
+          md:min-h-[280px]
+        "
+            >
+              {/* ICON */}
               <Image
-                src="/Group 163353.png"
+                src="/3-wchain.png"
                 alt="Exclusive Access Burns"
-                width={24}
-                height={24}
-                className="object-contain"
+                width={50}
+                height={50}
+                className="
+            w-[50px]
+            h-[50px]
+
+            object-contain
+
+            mb-6
+          "
               />
+
+              {/* TITLE */}
+              <h4
+                className="
+            text-[#4EA5FF]
+
+            text-[22px]
+            md:text-[24px]
+
+            font-bold
+
+            leading-[1.2]
+
+            mb-4
+          "
+              >
+                Exclusive Access Burns
+              </h4>
+
+              {/* DESCRIPTION */}
+              <p
+                className="
+            text-white/90
+
+            text-[15px]
+            md:text-[16px]
+
+            leading-[1.6]
+
+            font-light
+          "
+              >
+                Requiring a small amount of WAVE to be burned for access to
+                premium features or exclusive NFTs.
+              </p>
             </div>
-            <h4 className="text-[#4EA5FF] text-[18px] font-bold mb-3 leading-snug">
-              Exclusive Access Burns
-            </h4>
-            <p className="text-white/80 text-[14px] leading-relaxed font-light">
-              Requiring a small amount of WAVE to be burned for access to
-              premium features or exclusive NFTs.
-            </p>
           </div>
         </div>
       </section>
 
       {/* ================= STRATEGIC IMPORTANCE ================= */}
-      <section className="w-full py-20 px-4 md:px-10 flex flex-col items-center bg-[#020B2D] border-t border-white/5 pb-24">
-        <h2 className="text-[#4EA5FF] text-[32px] md:text-[42px] font-bold text-center mb-4">
+      <section className="w-full py-16 md:py-20 px-4 md:px-10 flex flex-col items-center bg-[#020B2D] border-t border-white/5 pb-20 md:pb-24">
+        {/* ================= HEADING ================= */}
+        <h2
+          className="
+      text-transparent
+      bg-clip-text
+
+      bg-[linear-gradient(90deg,#0D7FF2_0%,#B4E4FF_50%,#1F9DD8_100%)]
+
+      text-[34px]
+      sm:text-[42px]
+      md:text-[50px]
+
+      font-Montserrat
+      font-bold
+
+      text-center
+
+      leading-[1.15]
+
+      tracking-[-0.03em]
+
+      max-w-[1180px]
+
+      mb-4
+    "
+        >
           Strategic Importance for W Chain and WCO
         </h2>
-        <p className="text-center text-white text-[16px] md:text-[18px] leading-relaxed mb-16">
+
+        {/* ================= SUBTITLE ================= */}
+        <p
+          className="
+      text-white
+
+      text-center
+
+      text-[17px]
+      md:text-[25px]
+
+      leading-[1.5]
+
+      font-Montserrat
+      font-medium
+
+      mb-14
+      md:mb-20
+
+      max-w-[980px]
+    "
+        >
           The WAVE tokenomics model is strategically designed to:
         </p>
 
-        <div className="w-full max-w-[1200px] grid grid-cols-1 md:grid-cols-3 gap-10">
-          {/* Block 1 */}
+        {/* ================= BLOCKS ================= */}
+        <div
+          className="
+      w-full
+      max-w-[1250px]
+
+      grid
+      grid-cols-1
+      md:grid-cols-3
+
+      gap-14
+      md:gap-10
+    "
+        >
+          {/* ================= BLOCK 1 ================= */}
           <div className="flex flex-col items-center text-center">
-            <div className="w-[120px] h-[120px] rounded-full border border-white/10 flex items-center justify-center mb-6 bg-[radial-gradient(circle_at_center,rgba(78,165,255,0.1)_0%,transparent_100%)] shadow-[0_0_20px_rgba(0,0,0,0.3)]">
-              <Image
-                src="/Group 163419.png"
-                alt="Deepen WCO Liquidity"
-                width={50}
-                height={50}
-                className="object-contain"
-              />
-            </div>
-            <h4 className="text-[#4EA5FF] text-[20px] font-bold mb-3 leading-snug">
+            {/* IMAGE */}
+            <Image
+              src="/st1.png"
+              alt="Deepen WCO Liquidity"
+              width={150}
+              height={150}
+              className="
+          w-[120px]
+          h-[120px]
+
+          md:w-[150px]
+          md:h-[150px]
+
+          object-contain
+
+          mb-7
+        "
+            />
+
+            {/* TITLE */}
+            <h4
+              className="
+          text-transparent
+          bg-clip-text
+
+          bg-[linear-gradient(90deg,#0D7FF2_0%,#B4E4FF_50%,#1F9DD8_100%)]
+
+          text-[22px]
+          md:text-[24px]
+
+          font-Montserrat
+          font-bold
+
+          leading-[1.2]
+
+          mb-4
+        "
+            >
               Deepen WCO Liquidity
             </h4>
-            <p className="text-white/80 text-[15px] leading-relaxed font-light px-4">
+
+            {/* DESCRIPTION */}
+            <p
+              className="
+          text-white/90
+
+          text-[15px]
+          md:text-[16px]
+
+          leading-[1.6]
+
+          font-Montserrat
+          font-light
+
+          max-w-[340px]
+        "
+            >
               By incentivizing WAVE/WCO liquidity pools and through treasury
               operations locking WCO, WAVE directly supports the W Chain native
               token.
             </p>
           </div>
-          {/* Block 2 */}
+
+          {/* ================= BLOCK 2 ================= */}
           <div className="flex flex-col items-center text-center">
-            <div className="w-[120px] h-[120px] rounded-full border border-white/10 flex items-center justify-center mb-6 bg-[radial-gradient(circle_at_center,rgba(78,165,255,0.1)_0%,transparent_100%)] shadow-[0_0_20px_rgba(0,0,0,0.3)]">
-              <Image
-                src="/Group 163420.png"
-                alt="Drive On-Chain Activity"
-                width={50}
-                height={50}
-                className="object-contain"
-              />
-            </div>
-            <h4 className="text-[#4EA5FF] text-[20px] font-bold mb-3 leading-snug">
+            {/* IMAGE */}
+            <Image
+              src="/stg2.png"
+              alt="Drive On-Chain Activity"
+              width={150}
+              height={150}
+              className="
+          w-[120px]
+          h-[120px]
+
+          md:w-[150px]
+          md:h-[150px]
+
+          object-contain
+
+          mb-7
+        "
+            />
+
+            {/* TITLE */}
+            <h4
+              className="
+          text-transparent
+          bg-clip-text
+
+          bg-[linear-gradient(90deg,#0D7FF2_0%,#B4E4FF_50%,#1F9DD8_100%)]
+
+          text-[22px]
+          md:text-[24px]
+
+          font-Montserrat
+          font-bold
+
+          leading-[1.2]
+
+          mb-4
+        "
+            >
               Drive On-Chain Activity
             </h4>
-            <p className="text-white/80 text-[15px] leading-relaxed font-light px-4">
+
+            {/* DESCRIPTION */}
+            <p
+              className="
+          text-white/90
+
+          text-[15px]
+          md:text-[16px]
+
+          leading-[1.6]
+
+          font-Montserrat
+          font-light
+
+          max-w-[340px]
+        "
+            >
               Staking, rebalancing, and swapping of WAVE generate continuous
               transactions on W Chain.
             </p>
           </div>
-          {/* Block 3 */}
+
+          {/* ================= BLOCK 3 ================= */}
           <div className="flex flex-col items-center text-center">
-            <div className="w-[120px] h-[120px] rounded-full border border-white/10 flex items-center justify-center mb-6 bg-[radial-gradient(circle_at_center,rgba(78,165,255,0.1)_0%,transparent_100%)] shadow-[0_0_20px_rgba(0,0,0,0.3)]">
-              <Image
-                src="/Group 162908.png"
-                alt="Foster Community Loyalty"
-                width={50}
-                height={50}
-                className="object-contain"
-              />
-            </div>
-            <h4 className="text-[#4EA5FF] text-[20px] font-bold mb-3 leading-snug">
+            {/* IMAGE */}
+            <Image
+              src="/stg3.png"
+              alt="Foster Community Loyalty"
+              width={150}
+              height={150}
+              className="
+          w-[120px]
+          h-[120px]
+
+          md:w-[150px]
+          md:h-[150px]
+
+          object-contain
+
+          mb-7
+        "
+            />
+
+            {/* TITLE */}
+            <h4
+              className="
+          text-transparent
+          bg-clip-text
+
+          bg-[linear-gradient(90deg,#0D7FF2_0%,#B4E4FF_50%,#1F9DD8_100%)]
+
+          text-[22px]
+          md:text-[24px]
+
+          font-Montserrat
+          font-bold
+
+          leading-[1.2]
+
+          mb-4
+        "
+            >
               Foster Community Loyalty
             </h4>
-            <p className="text-white/80 text-[15px] leading-relaxed font-light px-4">
+
+            {/* DESCRIPTION */}
+            <p
+              className="
+          text-white/90
+
+          text-[15px]
+          md:text-[16px]
+
+          leading-[1.6]
+
+          font-Montserrat
+          font-light
+
+          max-w-[340px]
+        "
+            >
               The gamified yield model and transparent governance build a
               strong, committed user base for the W Chain ecosystem
             </p>

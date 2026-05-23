@@ -85,7 +85,7 @@ export default function Footer() {
           <FooterCol
             title="Resources"
             links={[
-              { label: "Roadmap", href: "#" },
+              { label: "Airdrop", href: "/airdrop" },
               { label: "Blogs", href: "/blogs" },
               { label: "Guides & Tutorials", href: "/guidelines" },
               { label: "Ecosystem & Partners", href: "#" },
@@ -102,7 +102,7 @@ export default function Footer() {
               { label: "W Chain Community", href: "#" },
               { label: "WayFinders Program", href: "/wayfinders" },
               { label: "Events & AMA's", href: "/events-and-amas" },
-              { label: "Community Forum", href: "#" },
+              { label: "Community Forum", href: "/community" },
               { label: "Legacy Holders Benefits", href: "#" },
             ]}
           />

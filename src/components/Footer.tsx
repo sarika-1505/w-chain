@@ -5,22 +5,34 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="w-full flex flex-col items-center bg-[#002F8D] relative z-40 overflow-hidden">
+    <footer className="w-full min-h-[571px] flex flex-col items-center bg-[#002F8D] relative z-40 overflow-hidden">
       <div
         className="
           w-full
-          min-h-144.25
-          md:h-144.25
+
+          min-h-[491px]
+          md:h-[491px]
+
           rounded-t-[40px]
+
           overflow-hidden
-          bg-cover bg-center
-          border border-white/10 border-b-0
+
+          bg-cover
+          bg-center
+
+          border
+          border-white/10
+          border-b-0
+
           relative
-          flex flex-col justify-between
+
+          flex
+          flex-col
+          justify-between
         "
         style={{ backgroundImage: "url('/footer-bg.png')" }}
       >
-        {/* Footer Content */}
+        {/* ================= FOOTER CONTENT ================= */}
         <div
           className="
             relative
@@ -48,7 +60,7 @@ export default function Footer() {
             gap-x-10
           "
         >
-          {/* Get Started */}
+          {/* ================= GET STARTED ================= */}
           <div className="flex flex-col">
             <FooterCol
               title="Get Started"
@@ -66,7 +78,7 @@ export default function Footer() {
               ]}
             />
 
-            <div className="mt-8 md:mt-12">
+            <div className="mt-8 md:mt-10">
               <Image
                 src="/W Chain-Transparent 1.png"
                 alt="W Chain Logo"
@@ -77,7 +89,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Developers */}
+          {/* ================= DEVELOPERS ================= */}
           <FooterCol
             title="Developers"
             links={[
@@ -89,7 +101,7 @@ export default function Footer() {
             ]}
           />
 
-          {/* Resources */}
+          {/* ================= RESOURCES ================= */}
           <FooterCol
             title="Resources"
             links={[
@@ -103,7 +115,7 @@ export default function Footer() {
             ]}
           />
 
-          {/* Community */}
+          {/* ================= COMMUNITY ================= */}
           <FooterCol
             title="Community"
             links={[
@@ -115,7 +127,7 @@ export default function Footer() {
             ]}
           />
 
-          {/* Legal */}
+          {/* ================= LEGAL ================= */}
           <div className="flex flex-col">
             <FooterCol
               title="Legal"
@@ -131,105 +143,69 @@ export default function Footer() {
               ]}
             />
 
-            {/* Social Icons */}
+            {/* ================= SOCIAL ICONS ================= */}
             <div
               className="
-    mt-10
+                mt-10
 
-    flex
-    items-center
-    flex-nowrap
+                flex
+                items-center
+                flex-nowrap
 
-    gap-1
-    sm:gap-2
-  "
+                gap-2
+                sm:gap-2
+              "
             >
               {[
-                "/social-icon/Group 162647.png", // X
-                "/social-icon/Group 162648.png", // Discord
-                "/social-icon/18.png", // Telegram
-                "/social-icon/20.png", // Linkedin
-                "/social-icon/19.png", // Youtube
+                "/social-icon/Group 162647.png",
+                "/social-icon/Group 162648.png",
+                "/social-icon/18.png",
+                "/social-icon/20.png",
+                "/social-icon/19.png",
               ].map((icon, i) => (
                 <div
                   key={i}
                   className="
-        w-[30px]
-        h-[30px]
+                    shrink-0
 
-        sm:w-[36px]
-        sm:h-[36px]
+                    transition-all
+                    duration-300
 
-        lg:w-[40px]
-        lg:h-[40px]
-
-        rounded-full
-
-        p-[1px]
-
-        bg-[radial-gradient(circle,#8BC9D4_0%,#FFFFFF_50%,#8BC9D4_100%)]
-
-        shadow-[0_0_10px_rgba(139,201,212,0.18)]
-
-        shrink-0
-      "
+                    hover:scale-105
+                  "
                 >
-                  {/* INNER CIRCLE */}
-                  <div
+                  <Image
+                    src={icon}
+                    alt="social-icon"
+                    width={40}
+                    height={40}
                     className="
-          w-full
-          h-full
-
-          rounded-full
-
-          bg-[linear-gradient(180deg,#536A96_0%,#31548D_50%,#10367D_100%)]
-
-          flex
-          items-center
-          justify-center
-
-          transition-all
-          duration-300
-
-          hover:scale-105
-        "
-                  >
-                    <Image
-                      src={icon}
-                      alt="social-icon"
-                      width={40}
-                      height={40}
-                      className="
-            object-contain
-
-            w-[14px]
-            h-[14px]
-
-            sm:w-[16px]
-            sm:h-[16px]
-
-            lg:w-[18px]
-            lg:h-[18px]
-          "
-                    />
-                  </div>
+                      object-contain
+                    "
+                  />
                 </div>
               ))}
             </div>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="w-full h-[80px] border-t border-white/10 bg-[#031226] relative flex items-center justify-center px-6 md:px-[70px]">
+        {/* ================= BOTTOM BAR ================= */}
+        <div className="w-full h-[80px] bg-[#000D27] relative flex items-center justify-center px-6 md:px-[70px]">
           {/* Copyright */}
           <div
             className="
               text-white
               font-Montserrat
               font-normal
-              text-[16px]
+
+              text-[11px]
+              sm:text-[13px]
+              md:text-[16px]
+
               leading-[100%]
+
               tracking-[-0.03em]
+
               text-center
             "
           >
@@ -237,7 +213,7 @@ export default function Footer() {
           </div>
 
           {/* Audit Badge */}
-          <div className="hidden md:flex absolute right-6 md:right-17.5 items-center">
+          <div className="hidden md:flex absolute right-6 md:right-[70px] items-center">
             <Image
               src="/bottom-bar-img.png"
               alt="Audited by QuillAudits"
@@ -252,7 +228,7 @@ export default function Footer() {
   );
 }
 
-/* Footer Column */
+/* ================= FOOTER COLUMN ================= */
 function FooterCol({
   title,
   links,
@@ -273,6 +249,7 @@ function FooterCol({
             h-0.5
             mt-2
             rounded-r-[20px]
+
             bg-[linear-gradient(90deg,#0D7FF2_0%,#B4E4FF_50%,#1F9DD8_100%)]
           "
         ></span>
@@ -291,15 +268,6 @@ function FooterCol({
           </li>
         ))}
       </ul>
-    </div>
-  );
-}
-
-/* Social Icon */
-function SocialIcon({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="w-10 h-10 min-w-10 rounded-full  flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300 cursor-pointer">
-      {children}
     </div>
   );
 }

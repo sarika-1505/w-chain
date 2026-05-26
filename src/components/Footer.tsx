@@ -9,8 +9,8 @@ export default function Footer() {
       <div
         className="
           w-full
-          min-h-[577px]
-          md:h-[577px]
+          min-h-144.25
+          md:h-144.25
           rounded-t-[40px]
           overflow-hidden
           bg-cover bg-center
@@ -23,21 +23,29 @@ export default function Footer() {
         {/* Footer Content */}
         <div
           className="
+            relative
+            z-10
+
             w-full
             max-w-[1440px]
+
             mx-auto
+
             px-6
             md:px-[70px]
-            pt-10
-            md:pt-[55px]
-            pb-6
+
+            pt-12
+            md:pt-13
+
+            pb-8
+
             grid
             grid-cols-2
             md:grid-cols-3
             lg:grid-cols-5
-            gap-10
-            md:gap-[70px]
-            flex-1
+
+            gap-y-10
+            gap-x-10
           "
         >
           {/* Get Started */}
@@ -124,66 +132,59 @@ export default function Footer() {
             />
 
             {/* Social Icons */}
-            <div className="mt-10 flex items-center gap-3 flex-nowrap">
-              {/* X */}
-              <SocialIcon>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="w-4 h-4"
-                >
-                  <path d="M18.244 2.25h3.308l-7.227 8.26L23 21.75h-6.844l-5.36-6.993L4.682 21.75H1.372l7.73-8.835L1 2.25h7.02l4.848 6.231L18.244 2.25z" />
-                </svg>
-              </SocialIcon>
+            <div className="mt-10 flex items-center gap-1 flex-nowrap">
+              {[
+                "/social-icon/Group 162647.png", // X
+                "/social-icon/Group 162648.png", // Discord
+                "/social-icon/18.png", // Telegram
+                "/social-icon/20.png", // Linkedin
+                "/social-icon/19.png", // Youtube
+              ].map((icon, i) => (
+                <div
+                  key={i}
+                  className="
+        w-[40px]
+        h-[40px]
 
-              {/* Discord */}
-              <SocialIcon>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 127.14 96.36"
-                  fill="currentColor"
-                  className="w-4 h-4"
-                >
-                  <path d="M107.7 8.07A105.15 105.15 0 0 0 81.47 0a72.06 72.06 0 0 0-3.36 6.83A97.68 97.68 0 0 0 49 6.83 72.37 72.37 0 0 0 45.64 0 105.89 105.89 0 0 0 19.39 8.09C2.79 32.65-1.71 56.6.54 80.21A105.73 105.73 0 0 0 32.71 96.36a77.7 77.7 0 0 0 6.89-11.11 68.42 68.42 0 0 1-10.84-5.18c.91-.66 1.8-1.34 2.66-2.06a75.57 75.57 0 0 0 64.32 0c.87.72 1.76 1.4 2.67 2.06a68.68 68.68 0 0 1-10.86 5.19 77 77 0 0 0 6.89 11.1A105.25 105.25 0 0 0 126.6 80.22C129.24 52.84 122.09 29.11 107.7 8.07Z" />
-                </svg>
-              </SocialIcon>
+        rounded-full
 
-              {/* Telegram */}
-              <SocialIcon>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="w-4 h-4"
-                >
-                  <path d="M21.944 2.506a1 1 0 0 0-1.06-.156L2.884 9.35a1 1 0 0 0 .078 1.87l4.91 1.64 1.64 4.91a1 1 0 0 0 .787.676h.1a1 1 0 0 0 .74-.33l2.73-3.27 4.62 3.39a1 1 0 0 0 1.56-.61l3-14a1 1 0 0 0-.1-.77Z" />
-                </svg>
-              </SocialIcon>
+        p-[1px]
 
-              {/* LinkedIn */}
-              <SocialIcon>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="w-4 h-4"
-                >
-                  <path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.48 1 4.98 2.12 4.98 3.5ZM.5 8h4V24h-4V8Zm7.5 0h3.8v2.16h.05c.53-1 1.84-2.16 3.79-2.16 4.05 0 4.8 2.66 4.8 6.12V24h-4v-7.09c0-1.69-.03-3.87-2.36-3.87-2.37 0-2.73 1.85-2.73 3.75V24h-4V8Z" />
-                </svg>
-              </SocialIcon>
+        bg-[radial-gradient(circle,#8BC9D4_0%,#FFFFFF_50%,#8BC9D4_100%)]
 
-              {/* YouTube */}
-              <SocialIcon>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="w-4 h-4"
+        shadow-[0_0_10px_rgba(139,201,212,0.18)]
+      "
                 >
-                  <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.2 31.2 0 0 0 0 12a31.2 31.2 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.2 31.2 0 0 0 24 12a31.2 31.2 0 0 0-.5-5.8ZM9.75 15.5v-7l6 3.5-6 3.5Z" />
-                </svg>
-              </SocialIcon>
+                  {/* INNER CIRCLE */}
+                  <div
+                    className="
+          w-full
+          h-full
+
+          rounded-full
+
+          bg-[linear-gradient(180deg,#536A96_0%,#31548D_50%,#10367D_100%)]
+
+          flex
+          items-center
+          justify-center
+
+          transition-all
+          duration-300
+
+          hover:scale-105
+        "
+                  >
+                    <Image
+                      src={icon}
+                      alt="social-icon"
+                      width={40}
+                      height={40}
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

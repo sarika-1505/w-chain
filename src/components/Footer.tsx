@@ -17,9 +17,6 @@ export default function Footer() {
 
           overflow-hidden
 
-          bg-cover
-          bg-center
-
           border
           border-white/10
           border-b-0
@@ -29,6 +26,10 @@ export default function Footer() {
           flex
           flex-col
           justify-between
+          bg-center
+          bg-no-repeat
+          bg-cover
+          [background-position:top]
         "
         style={{ backgroundImage: "url('/footer-bg.png')" }}
       >

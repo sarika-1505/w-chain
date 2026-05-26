@@ -132,7 +132,18 @@ export default function Footer() {
             />
 
             {/* Social Icons */}
-            <div className="mt-10 flex items-center gap-1 flex-nowrap">
+            <div
+              className="
+    mt-10
+
+    flex
+    items-center
+    flex-nowrap
+
+    gap-1
+    sm:gap-2
+  "
+            >
               {[
                 "/social-icon/Group 162647.png", // X
                 "/social-icon/Group 162648.png", // Discord
@@ -143,8 +154,14 @@ export default function Footer() {
                 <div
                   key={i}
                   className="
-        w-[40px]
-        h-[40px]
+        w-[30px]
+        h-[30px]
+
+        sm:w-[36px]
+        sm:h-[36px]
+
+        lg:w-[40px]
+        lg:h-[40px]
 
         rounded-full
 
@@ -153,6 +170,8 @@ export default function Footer() {
         bg-[radial-gradient(circle,#8BC9D4_0%,#FFFFFF_50%,#8BC9D4_100%)]
 
         shadow-[0_0_10px_rgba(139,201,212,0.18)]
+
+        shrink-0
       "
                 >
                   {/* INNER CIRCLE */}
@@ -180,7 +199,18 @@ export default function Footer() {
                       alt="social-icon"
                       width={40}
                       height={40}
-                      className="object-contain"
+                      className="
+            object-contain
+
+            w-[14px]
+            h-[14px]
+
+            sm:w-[16px]
+            sm:h-[16px]
+
+            lg:w-[18px]
+            lg:h-[18px]
+          "
                     />
                   </div>
                 </div>

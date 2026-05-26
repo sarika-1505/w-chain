@@ -189,40 +189,40 @@ export default function Footer() {
             </div>
           </div>
         </div>
+      </div>
 
-        {/* ================= BOTTOM BAR ================= */}
-        <div className="w-full h-[80px] bg-[#000D27] relative flex items-center justify-center px-6 md:px-[70px]">
-          {/* Copyright */}
-          <div
-            className="
-              text-white
-              font-Montserrat
-              font-normal
+      {/* ================= BOTTOM BAR ================= */}
+      <div className="w-full h-[80px] bg-[#000D27] relative flex items-center justify-center px-6 md:px-[70px]">
+        {/* Copyright */}
+        <div
+          className="
+            text-white
+            font-Montserrat
+            font-normal
 
-              text-[11px]
-              sm:text-[13px]
-              md:text-[16px]
+            text-[11px]
+            sm:text-[13px]
+            md:text-[16px]
 
-              leading-[100%]
+            leading-[100%]
 
-              tracking-[-0.03em]
+            tracking-[-0.03em]
 
-              text-center
-            "
-          >
-            © 2026 W Chain. All rights reserved.
-          </div>
+            text-center
+          "
+        >
+          © 2026 W Chain. All rights reserved.
+        </div>
 
-          {/* Audit Badge */}
-          <div className="hidden md:flex absolute right-6 md:right-[70px] items-center">
-            <Image
-              src="/bottom-bar-img.png"
-              alt="Audited by QuillAudits"
-              width={127}
-              height={52}
-              className="object-contain"
-            />
-          </div>
+        {/* Audit Badge */}
+        <div className="hidden md:flex absolute right-6 md:right-[70px] items-center">
+          <Image
+            src="/bottom-bar-img.png"
+            alt="Audited by QuillAudits"
+            width={127}
+            height={52}
+            className="object-contain"
+          />
         </div>
       </div>
     </footer>

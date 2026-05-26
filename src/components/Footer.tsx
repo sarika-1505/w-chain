@@ -237,7 +237,7 @@ export default function Footer() {
           </div>
 
           {/* Audit Badge */}
-          <div className="absolute right-6 md:right-[70px] flex items-center">
+          <div className="hidden md:flex absolute right-6 md:right-17.5 items-center">
             <Image
               src="/bottom-bar-img.png"
               alt="Audited by QuillAudits"
@@ -269,8 +269,8 @@ function FooterCol({
         <span
           className="
             block
-            w-[115px]
-            h-[2px]
+            w-28.75
+            h-0.5
             mt-2
             rounded-r-[20px]
             bg-[linear-gradient(90deg,#0D7FF2_0%,#B4E4FF_50%,#1F9DD8_100%)]
@@ -298,7 +298,7 @@ function FooterCol({
 /* Social Icon */
 function SocialIcon({ children }: { children: React.ReactNode }) {
   return (
-    <div className="w-[40px] h-[40px] min-w-[40px] rounded-full  flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300 cursor-pointer">
+    <div className="w-10 h-10 min-w-10 rounded-full  flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300 cursor-pointer">
       {children}
     </div>
   );

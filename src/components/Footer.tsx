@@ -246,7 +246,7 @@ function FooterCol({
         <span
           className="
             block
-            w-28.75
+            w-[115px]
             h-0.5
             mt-2
             rounded-r-[20px]

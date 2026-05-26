@@ -830,7 +830,7 @@ export default function Airdrop() {
 
           leading-[1.4]
 
-          max-w-232.5
+          max-w-[930px]
 
           mb-10
         "

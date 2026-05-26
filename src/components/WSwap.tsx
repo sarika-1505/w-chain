@@ -160,8 +160,8 @@ export default function WSwap() {
                 className="
             group
 
-            h-12.75
-            min-w-63.75
+            h-[51px]
+            min-w-[255px]
 
             rounded-full
 
@@ -170,7 +170,7 @@ export default function WSwap() {
 
             bg-[#00142C]
 
-            pl-5.5
+            pl-[22px]
             pr-2
 
             flex
